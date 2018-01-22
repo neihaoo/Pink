@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body class="inner-page">
+    <header class="page-header">
+      <nav class="main-nav wrapper">
+        <a href="index.html" class="main-nav__logo logo">
+          <img class="logo__image" src="img/logo.svg" width="75" height="20" alt="Пинк">
+        </a>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a>Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      </nav>
+      <h1 class="page-header__title">Фотографии пользователей</h1>
+    </header>
+    <main class="page-main">
+      <section class="photos">
+        <h2 class="visually-hidden">Размещенные фотографии</h2>
+        <div class="photos__wrapper">
+          <div class="photos__slogan slogan">
+            <p class="slogan__text">Взгляните на фотографии, которые выкладывают пользователи!</p>
+            <p class="slogan__text">Видите, как не хватает ваших?</p>
+          </div>
+        </div>
+        <section class="user-photo user-photo--best">
+          <h3 class="visually-hidden">Фото дня</h3>
+          <img class="user-photo__image" src="img/user-photo-day.jpg" width="320" height="137" alt="Мост над рекой">
+          <div class="user-photo__wrapper">
+            <div class="user-photo__caption">
+              <b class="user-photo__author-name">Анна <span class="user-photo__text user-photo__text--date">(5 минут назад)</span></b>
+              <p class="user-photo__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <p class="user-photo__text user-photo__text--likes">Нравится: 215</p>
+            </div>
+          </div>
+        </section>
+        <div class="photos__wrapper">
+          <ul class="photos__list">
+            <li class="photos__item">
+              <section class="user-photo">
+                <h3 class="visually-hidden">Фотографии пользователя Левон</h3>
+                <img class="user-photo__image" src="img/user-photo1.jpg" width="280" height="180" alt="Фотосъемка автомобиля">
+                <div class="user-photo__caption">
+                  <b class="user-photo__author-name">Левон <span class="user-photo__text user-photo__text--date">(5 часов назад)</span></b>
+                  <p class="user-photo__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                  <p class="user-photo__text user-photo__text--likes">Нравится: 356</p>
+                </div>
+              </section>
+            </li>
+            <li class="photos__item">
+              <section class="user-photo">
+                <h3 class="visually-hidden">Фотографии пользователя Антон</h3>
+                <img class="user-photo__image" src="img/user-photo2.jpg" width="280" height="180" alt="Ударная установка">
+                <div class="user-photo__caption">
+                  <b class="user-photo__author-name">Антон <span class="user-photo__text user-photo__text--date">(12 часов назад)</span></b>
+                  <p class="user-photo__text">Соседи будут рады!</p>
+                  <p class="user-photo__text user-photo__text--likes">Нравится: 666</p>
+                </div>
+              </section>
+            </li>
+            <li class="photos__item">
+              <section class="user-photo">
+                <h3 class="visually-hidden">Фотографии пользователя Борис</h3>
+                <img class="user-photo__image" src="img/user-photo3.jpg" width="280" height="180" alt="Вид на облака через стеклянный потолок">
+                <div class="user-photo__caption">
+                  <b class="user-photo__author-name">Борис <span class="user-photo__text user-photo__text--date">(20 часов назад)</span></b>
+                  <p class="user-photo__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                  <p class="user-photo__text user-photo__text--likes">Нравится: 215</p>
+                </div>
+              </section>
+            </li>
+            <li class="photos__item">
+              <section class="user-photo">
+                <h3 class="visually-hidden">Фотографии пользователя Сергей</h3>
+                <img class="user-photo__image" src="img/user-photo4.jpg" width="280" height="180" alt="Кубанская бахча">
+                <div class="user-photo__caption">
+                  <b class="user-photo__author-name">Сергей <span class="user-photo__text user-photo__text--date">(25 часов назад)</span></b>
+                  <p class="user-photo__text">Самая кубанская в мире!</p>
+                  <p class="user-photo__text user-photo__text--likes">Нравится: 4</p>
+                </div>
+              </section>
+            </li>
+            <li class="photos__item">
+              <section class="user-photo">
+                <h3 class="visually-hidden">Фотографии пользователя Максим</h3>
+                <img class="user-photo__image" src="img/user-photo5.jpg" width="280" height="180" alt="Вид с горы">
+                <div class="user-photo__caption">
+                  <b class="user-photo__author-name">Максим <span class="user-photo__text user-photo__text--date">(40 часов назад)</span></b>
+                  <p class="user-photo__text">Где снег-то?</p>
+                  <p class="user-photo__text user-photo__text--likes">Нравится: 150</p>
+                </div>
+              </section>
+            </li>
+            <li class="photos__item">
+              <section class="user-photo">
+                <h3 class="visually-hidden">Фотографии пользователя Надежда</h3>
+                <img class="user-photo__image" src="img/user-photo6.jpg" width="280" height="180" alt="Крыло самолета во время полета">
+                <div class="user-photo__caption">
+                  <b class="user-photo__author-name">Надежда <span class="user-photo__text user-photo__text--date">(45 часов назад)</span></b>
+                  <p class="user-photo__text">Всем GM и взаимные лайки!</p>
+                  <p class="user-photo__text user-photo__text--likes">Нравится: 2560</p>
+                </div>
+              </section>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="photos__upload">
+        <h2 class="visually-hidden">Загрузка фотографий</h2>
+        <div class="photos__slogan ">
+          <p class="photos__text">Взгляните на фотографии, которые выкладывают пользователи!</p>
+          <p class="photos__text">Видите, как не хватает ваших?</p>
+        </div>
+        <section class="upload-form">
+          <h3 class="visually-hidden">Форма загрузки фотографий</h3>
+          <img class="upload-form__image" src="img/upload-photo.jpg" width="280" height="374" alt="Зимняя дорого">
+          <form class="upload-form__filter" action="https://echo.htmlacademy.ru" method="post">
+            <label class="upload-form__filter-item upload-form__filter-item--active">
+              <img class="upload-form__filte-image upload-form__filte-image--crop" src="img/crop.svg" width="48" height="48" alt="Обрезать фотографию">
+              <input type="range" name="crop-range" >
+            </label>
+            <label class="upload-form__filter-item upload-form__filter-item">
+              <img class="upload-form__filte-image upload-form__filte-image--saturation" src="img/saturation.svg" width="48" height="48" alt="Обрезать фотографию">
+              <input type="range" name="saturation-range">
+            </label>
+            <label class="upload-form__filter-item upload-form__filter-item">
+              <img class="upload-form__filte-image upload-form__filte-image--contrast" src="img/contrast.svg" width="48" height="48" alt="Обрезать фотографию">
+              <input type="range" name="contrast-range" >
+            </label>
+            <button class="button button--submit" type="submit">Запостить</button>
+            <button class="button button--reset" type="reset">Отмена</button>
+          </form>
+        </section>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo logo">
+          <img class="logo__image logo__image--glass" src="img/logo.svg" width="75" height="20" alt="Пинк">
+        </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="https://vk.com">Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com">Youtube</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__text">Разработано:</p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__image" src="img/copyright.svg" width="27" height="34" alt="HTML Academy">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
