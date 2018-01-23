@@ -5,159 +5,236 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-    <header class="page-header">
-      <nav class="main-nav wrapper">
-        <a class="main-nav__logo logo">
-          <img class="logo__image" src="img/logo.svg" width="75" height="20" alt="Пинк">
+    <header class="header">
+      <nav class="nav">
+        <a class="nav__logo" href="#">
+          <img class="nav__logo-image" src="http://placehold.it/75x22" alt="Пинк">
         </a>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="#">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
+          <li class="nav__item">
+            <a class="nav__link" href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <li class="nav__item">
+            <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="nav__toggle nav__toggle--open" type="button">Открыть меню</button>
       </nav>
-      <section class="app-link">
-        <h2 class="visually-hidden">Скачать приложение</h2>
-        <div class="app-link__wrapper">
-          <a class="app-link__button" href="https://itunes.apple.com">Скачать приложение</a>
-          <ul>
-            <li>
-              <a href="https://itunes.apple.com">
-                <img src="img/apple.svg" width="75" height="56" alt="Apple">
-              </a>
-            </li>
-            <li>
-              <a href="https://play.google.com">
-                <img src="img/android.svg" width="43" height="47" alt="Android">
-              </a>
-            </li>
-            <li>
-              <a href="https://www.microsoft.com/store">
-                <img src="img/windows.svg" width="44" height="41" alt="Windows Phone">
-              </a>
-            </li>
-          </ul>
-          <p class="app-link__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
-        </div>
-      </section>
     </header>
-    <main class="page-main">
-      <h1 class="visually-hidden">Приложение PINK</h1>
+    <main class="content">
+      <div class="hero">
+        <h1 class="visually-hidden">Приложение PINK</h1>
+      </div>
+      <section class="app-links">
+        <h2 class="visually-hidden">Скачать приложение</h2>
+        <a class="app-links__button button" href="https://itunes.apple.com">Скачать приложение</a>
+        <div class="app-links__wrapper">
+          <div class="app-links__item">
+            <a class="app-links__link" href="https://itunes.apple.com">
+              <img src="http://placehold.it/44x44" alt="Apple">
+            </a>
+          </div>
+          <div class="app-links__item">
+            <a class="app-links__link" href="https://play.google.com">
+              <img src="http://placehold.it/44x44" alt="Android">
+            </a>
+          </div>
+          <div class="app-links__item">
+            <a class="app-links__link" href="https://www.microsoft.com/store">
+              <img src="http://placehold.it/44x44" alt="Windows Phone">
+            </a>
+          </div>
+        </div>
+        <p class="app-links__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+      </section>
       <section class="about">
         <h2 class="visually-hidden">Характеристики приложения</h2>
-        <div class="about__wrapper">
+        <div class="about__wrapper-main">
           <div class="about__slogan slogan">
             <p class="slogan__text">Устали от серости мегаполиса?</p>
             <p class="slogan__text">Нам есть, что вам предложить!</p>
           </div>
-          <ul class="about__list">
+          <ul class="about__items">
             <li class="about__item">
-              <b class="about__title">Поднимает настроение</b>
+              <h3 class="about__title">Поднимает настроение</h3>
               <p class="about__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="about__item">
-              <b class="about__title">Меняет мир вокруг</b>
+              <h3 class="about__title">Меняет мир вокруг</h3>
               <p class="about__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
             <li class="about__item">
-              <b class="about__title">Заводит новых друзей</b>
+              <h3 class="about__title">Заводит новых друзей</h3>
               <p class="about__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
-          <img class="about-photo" src="img/about-photo" width="157" height="330" alt="Всем привет!">
+          <div class="about__wrapper-inner">
+            <img class="about__photo" src="http://placehold.it/157x330" alt="Всем привет!">
+          </div>
         </div>
       </section>
       <section class="reviews">
-        <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__wrapper slider">
-          <div class="reviews__list  slider__list">
-            <blockquote class="reviews__item  slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        <h2 class="visually-hidden">Отзывы</h2>
+        <div class="reviews__wrapper">
+          <div class="reviews__slider  slider">
+            <blockquote class="reviews__item  review">
+              <cite class="review__author">Николай Петров</cite>
+              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
+            <p class="reviews__toggles slider__toggles">
+              <button class="slider__toggle slider__toggle--active" type="button">1</button>
+              <button class="slider__toggle" type="button">2</button>
+              <button class="slider__toggle" type="button">3</button>
+            </p>
           </div>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--active" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
         </div>
       </section>
       <section class="price">
-        <h2 class="price__title">Тарифы</h2>
-        <div class="price__wrapper slider">
-          <ul class="price__list  slider__list">
-            <li class="slider__item">
+        <h2 class="visually-hidden">Тарифы</h2>
+        <div class="price__wrapper">
+          <div class="price__slider  slider">
+            <div class="slider__item">
               <table class="price__table">
-                <tr>
-                  <th class="price__header">
-                    <p class="price__title">Стандарт</p>
-                    <p class="price__text">3,99 USD</p>
-                  </th>
-                  <th class="price__header--empty"></th>
-                </tr>
-                <tr>
-                  <td class="price__field">Розовый фильтр</td>
-                  <td class="price__value"></td>
-                </tr>
-                <tr>
-                  <td class="price__field">Смайлики</td>
-                  <td class="price__value"></td>
-                </tr>
-                <tr>
-                  <td class="price__field">Комментарии</td>
-                  <td class="price__value"></td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th class="price__header" colspan="2">
+                      <p class="price__title">База</p>
+                      <p class="price__text">1,99 USD</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="price__field">Розовый фильтр</td>
+                    <td class="price__value">
+                      <span class="price__value-icon price__value-icon--checked"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="price__field">Смайлики</td>
+                    <td class="price__value">
+                      <span class="price__value-icon price__value-icon--cross"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="price__field">Комментарии</td>
+                    <td class="price__value">
+                      <span class="price__value-icon price__value-icon--cross"></span>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
-            </li>
-          </ul>
-          <p class="price__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle slider__toggle--active" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
+            </div>
+            <div class="slider__item">
+              <table class="price__table price__table--popular">
+                <thead>
+                  <tr>
+                    <th class="price__header" colspan="2">
+                      <p class="price__title">Стандарт</p>
+                      <p class="price__text">3,99 USD</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="price__field">Розовый фильтр</td>
+                    <td class="price__value">
+                      <span class="price__value-icon price__value-icon--checked"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="price__field">Смайлики</td>
+                    <td class="price__value">
+                      <span class="price__value-icon price__value-icon--checked"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="price__field">Комментарии</td>
+                    <td class="price__value">
+                      <span class="price__value-icon price__value-icon--cross"></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="slider__item">
+              <table class="price__table">
+                <thead>
+                  <tr>
+                    <th class="price__header" colspan="2">
+                      <p class="price__title">Анлим</p>
+                      <p class="price__text">9,99 USD</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="price__field">Розовый фильтр</td>
+                    <td class="price__value">
+                      <span class="price__value-icon price__value-icon--checked"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="price__field">Смайлики</td>
+                    <td class="price__value">
+                      <span class="price__value-icon price__value-icon--checked"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="price__field">Комментарии</td>
+                    <td class="price__value">
+                      <span class="price__value-icon price__value-icon--checked"></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="price__toggles slider__toggles">
+              <button class="slider__toggle" type="button">1</button>
+              <button class="slider__toggle slider__toggle--active" type="button">2</button>
+              <button class="slider__toggle" type="button">3</button>
+            </p>
+          </div>
         </div>
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
         <div class="contacts__wrapper">
-          <p class="contacts__text">Остались вопросы?</p>
-          <p class="contacts__text">Свяжитесь с нами!</p>
-          <ul class="contacts__list">
+          <div class="contacts__slogan slogan">
+            <p class="slogan__text">Остались вопросы?</p>
+            <p class="slogan__text">Свяжитесь с нами!</p>
+          </div>
+          <ul class="contacts__items">
             <li class="contacts__item">
-              <b>Звоните:</b>
-              <p>+7 (812) 555-66-66</p>
+              <span class="contacts__subtitle">Звоните:</span>
+              <a class="contacts__info" href="tel:+78125556666">+7 (812) 555-66-66</a>
             </li>
             <li class="contacts__item">
-              <b>Пишите:</b>
-              <p>mail@htmlacademy.ru</p>
+              <span class="contacts__subtitle">Пишите:</span>
+              <a class="contacts__info" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
             <li class="contacts__item">
-              <b>Приезжайте в гости:</b>
-              <p>ул. Большая Конюшенная, 19/8</p>
+              <span class="contacts__subtitle">Приезжайте в гости:</span>
+              <p class="contacts__info">ул. Большая Конюшенная, 19/8</p>
             </li>
           </ul>
         </div>
-        <img class="contacts_map" src="img/map.jpg" alt="Наш адрес: ул. Большая Конюшенная, 19/8">
+        <img class="contacts_map" src="http://placehold.it/320x645" alt="Карта проезда">
       </section>
     </main>
-    <footer class="page-footer visually-hidden">
-      <div class="page-footer__wrapper">
-        <a class="page-footer__logo logo">
-          <img class="logo__image logo__image--glass" src="img/logo.svg" width="75" height="20" alt="Пинк">
+    <footer class="footer visually-hidden">
+      <div class="footer__wrapper">
+        <a class="footer__logo" href="index.html">
+          <img class="footer__logo-image" src="http://placehold.it/147x40" alt="Пинк">
         </a>
-        <div class="page-footer__social social">
-          <ul class="social__list">
+        <div class="footer__social social">
+          <ul class="social__items">
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://vk.com">Вконтакте</a>
             </li>
@@ -169,11 +246,13 @@
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright copyright">
-          <p class="copyright__text">Разработано:</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__image" src="img/copyright.svg" width="27" height="34" alt="HTML Academy">
-          </a>
+        <div class="footer__copyright copyright">
+          <p class="copyright__text">
+            Разработано:
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <img class="copyright__image" src="http://placehold.it/27x34" alt="HTML Academy">
+            </a>
+          </p>
         </div>
       </div>
     </footer>
