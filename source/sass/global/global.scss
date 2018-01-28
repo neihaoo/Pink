@@ -1,0 +1,17 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $main;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

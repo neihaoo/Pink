@@ -1,0 +1,27 @@
+.modal {
+  text-align: center;
+}
+
+.modal--error {
+  padding: 45px 20px 50px;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 35px;
+
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+}
+
+.modal__text {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.modal__button-wrapper {
+  padding: 50px 20px 54px;
+
+  background-color: $grey;
+}

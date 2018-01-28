@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
+      <nav class="nav nav--open">
         <a class="nav__logo" href="#">
           <img class="nav__logo-image" src="http://placehold.it/75x22" alt="Пинк">
         </a>
@@ -28,7 +29,7 @@
       </nav>
     </header>
     <main class="content">
-      <div class="hero">
+      <div class="hero hero--index">
         <h1 class="visually-hidden">Приложение PINK</h1>
       </div>
       <section class="app-links">
@@ -55,11 +56,11 @@
       </section>
       <section class="about">
         <h2 class="visually-hidden">Характеристики приложения</h2>
-        <div class="about__wrapper-main">
           <div class="about__slogan slogan">
             <p class="slogan__text">Устали от серости мегаполиса?</p>
             <p class="slogan__text">Нам есть, что вам предложить!</p>
           </div>
+        <div class="about__wrapper-main">
           <ul class="about__items">
             <li class="about__item">
               <h3 class="about__title">Поднимает настроение</h3>
@@ -105,7 +106,7 @@
                   <tr>
                     <th class="price__header" colspan="2">
                       <p class="price__title">База</p>
-                      <p class="price__text">1,99 USD</p>
+                      <p class="price__coast">1,99 USD</p>
                     </th>
                   </tr>
                 </thead>
@@ -137,7 +138,7 @@
                   <tr>
                     <th class="price__header" colspan="2">
                       <p class="price__title">Стандарт</p>
-                      <p class="price__text">3,99 USD</p>
+                      <p class="price__coast">3,99 USD</p>
                     </th>
                   </tr>
                 </thead>
@@ -169,7 +170,7 @@
                   <tr>
                     <th class="price__header" colspan="2">
                       <p class="price__title">Анлим</p>
-                      <p class="price__text">9,99 USD</p>
+                      <p class="price__coast">9,99 USD</p>
                     </th>
                   </tr>
                 </thead>
@@ -207,8 +208,7 @@
         <h2 class="visually-hidden">Наши контакты</h2>
         <div class="contacts__wrapper">
           <div class="contacts__slogan slogan">
-            <p class="slogan__text">Остались вопросы?</p>
-            <p class="slogan__text">Свяжитесь с нами!</p>
+            <p class="slogan__text">Остались вопросы? Свяжитесь с нами!</p>
           </div>
           <ul class="contacts__items">
             <li class="contacts__item">
