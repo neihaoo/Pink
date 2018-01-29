@@ -2,14 +2,14 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  color: #ffffff;
+  color: $bkg-main;
   text-transform: uppercase;
 
   background-color: transparent;
-}
 
-.nav--open {
-  background-color: $main;
+  &--open {
+    background-color: $main;
+  }
 }
 
 .nav__logo {
@@ -20,9 +20,9 @@
 }
 
 .nav__items {
-  text-align: center;
-
   @include clear-list;
+
+  text-align: center;
 }
 
 .nav__link {
@@ -30,6 +30,6 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
-  color: #ffffff;
+  color: $bkg-main;
   text-decoration: none;
 }

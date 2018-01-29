@@ -4,24 +4,23 @@
   margin: 0 auto;
 
   text-align: center;
-  color: #ffffff;
+  color: $bkg-main;
 
   background-color: $main;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-}
 
-.hero--index {
-  height: 462px;
+  &--index {
+    height: 462px;
 
-  background-color: $main;
-  background-image: url("../img/iphone-hand-mobile@1x.png"),
-    url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: left bottom, center;
-  background-size: auto, cover;
+    background-image: url("../img/iphone-hand-mobile@1x.png"),
+      url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, center;
+    background-size: auto, cover;
+  }
 }
 
 .hero__title {

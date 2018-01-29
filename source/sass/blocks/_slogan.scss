@@ -10,8 +10,8 @@
 .slogan__text {
   margin-top: 0;
   margin-bottom: 35px;
-}
 
-.slogan__text:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

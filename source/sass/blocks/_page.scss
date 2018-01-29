@@ -1,4 +1,4 @@
-body {
+.page {
   min-width: 320px;
   margin: 0;
   padding: 0;
@@ -9,9 +9,4 @@ body {
   font-family: "Open Sans", "Arial", sans-serif;
   color: $main;
   font-style: normal;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }

@@ -9,12 +9,12 @@
 .form-field__label {
   font-size: 18px;
   line-height: 30px;
-}
 
-.form-field__label--colored {
-  font-size: 14px;
-  color: $pink;
-  text-transform: uppercase;
+  &--colored {
+    font-size: 14px;
+    color: $element;
+    text-transform: uppercase;
+  }
 }
 
 .form-field__title {
@@ -22,7 +22,7 @@
 
   line-height: 18px;
   text-align: center;
-  color: $pink;
+  color: $element;
   text-transform: uppercase;
 }
 

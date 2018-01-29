@@ -1,9 +1,9 @@
 @import "global/grid";
-@import "global/vars";
+@import "global/colors";
 @import "global/mixin";
 @import "global/fonts";
-@import "global/global";
-@import "global/hide";
+@import "blocks/page";
+@import "blocks/visually-hidden";
 @import "blocks/header";
 @import "blocks/nav";
 @import "blocks/hero";

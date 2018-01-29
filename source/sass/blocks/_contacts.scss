@@ -8,21 +8,21 @@
 }
 
 .contacts__items {
+  @include clear-list;
+
   width: 280px;
   margin: 0 auto;
   padding-right: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
-
-  @include clear-list;
 }
 
 .contacts__item {
   margin-bottom: 30px;
-}
 
-.contacts__item:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__subtitle {
@@ -36,6 +36,6 @@
 
   font-weight: 300;
   font-size: 24px;
-  color: $pink;
+  color: $element;
   text-decoration: none;
 }

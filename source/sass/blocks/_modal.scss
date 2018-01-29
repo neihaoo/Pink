@@ -1,9 +1,9 @@
 .modal {
   text-align: center;
-}
 
-.modal--error {
-  padding: 45px 20px 50px;
+  &--error {
+    padding: 45px 20px 50px;
+  }
 }
 
 .modal__title {
@@ -12,7 +12,7 @@
 
   font-weight: 700;
   font-size: 18px;
-  color: #000000;
+  color: $caption;
 }
 
 .modal__text {
@@ -23,5 +23,5 @@
 .modal__button-wrapper {
   padding: 50px 20px 54px;
 
-  background-color: $grey;
+  background-color: $bkg-second;
 }
