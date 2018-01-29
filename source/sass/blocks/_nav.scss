@@ -1,0 +1,35 @@
+.nav {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  color: $bkg-main;
+  text-transform: uppercase;
+
+  background-color: transparent;
+
+  &--open {
+    background-color: $main;
+  }
+}
+
+.nav__logo {
+  display: inline-block;
+  width: 75px;
+  height: 22px;
+  margin: 22px 20px 25px;
+}
+
+.nav__items {
+  @include clear-list;
+
+  text-align: center;
+}
+
+.nav__link {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  color: $bkg-main;
+  text-decoration: none;
+}

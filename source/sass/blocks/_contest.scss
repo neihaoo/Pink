@@ -1,0 +1,28 @@
+.contest__offer {
+  width: 280px;
+  margin: 0 auto;
+  padding: 55px 20px 45px;
+}
+
+.contest__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  &--colored {
+    background-color: $bkg-second;
+  }
+}
+
+.contest__field {
+  margin-bottom: 20px;
+}
+
+.contest__text {
+  line-height: 30px;
+  text-align: center;
+}
+
+.contest__text--colored {
+  color: $element;
+}

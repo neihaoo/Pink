@@ -1,0 +1,32 @@
+.hero {
+  width: 320px;
+  height: 236px;
+  margin: 0 auto;
+
+  text-align: center;
+  color: $bkg-main;
+
+  background-color: $main;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  &--index {
+    height: 462px;
+
+    background-image: url("../img/iphone-hand-mobile@1x.png"),
+      url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, center;
+    background-size: auto, cover;
+  }
+}
+
+.hero__title {
+  margin: 0;
+  padding: 102px 20px 39px;
+
+  font-weight: 300;
+  font-size: 24px;
+}

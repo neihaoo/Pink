@@ -1,0 +1,40 @@
+.form-field {
+  border: none;
+}
+
+.form-field__item {
+  margin-bottom: 20px;
+}
+
+.form-field__label {
+  font-size: 18px;
+  line-height: 30px;
+
+  &--colored {
+    font-size: 14px;
+    color: $element;
+    text-transform: uppercase;
+  }
+}
+
+.form-field__title {
+  padding: 35px 0;
+
+  line-height: 18px;
+  text-align: center;
+  color: $element;
+  text-transform: uppercase;
+}
+
+.form-field__input {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.form-field__textarea {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Open Sans", "Arial", sans-serif;
+}

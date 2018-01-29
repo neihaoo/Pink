@@ -1,0 +1,38 @@
+.price {
+  line-height: 30px;
+  text-transform: uppercase;
+
+  background-color: $bkg-second;
+}
+
+.price__wrapper {
+  margin: 0 auto;
+  padding: 65px 0 50px;
+}
+
+.price__table {
+  margin-bottom: 45px;
+}
+
+.price__header {
+  padding: 20px;
+}
+
+.price__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.price__coast {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.price__field {
+  padding: 20px;
+}

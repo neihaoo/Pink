@@ -1,0 +1,35 @@
+.about {
+  text-align: center;
+}
+
+.about__slogan {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about__wrapper-main {
+  background-color: $bkg-second;
+}
+
+.about__items {
+  width: 280px;
+  margin: 0 auto;
+  padding: 54px 20px 40px;
+
+  list-style: none;
+}
+
+.about__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 18px;
+  color: $caption;
+}
+
+.about__text {
+  margin-top: 0;
+  margin-bottom: 35px;
+}

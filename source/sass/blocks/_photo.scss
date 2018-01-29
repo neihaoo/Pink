@@ -1,0 +1,36 @@
+.photo {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.photo__caption {
+  padding: 25px 20px;
+
+  background-color: $bkg-second;
+}
+
+.photo__author {
+  margin: 0;
+
+  font-weight: 700;
+}
+
+.photo__date {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.photo__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.photo__like {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: $element;
+}

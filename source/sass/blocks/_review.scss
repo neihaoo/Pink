@@ -1,0 +1,18 @@
+.review {
+  margin: 0;
+
+  line-height: 30px;
+  text-align: center;
+}
+
+.review__author {
+  font-weight: 700;
+  font-size: 18px;
+  color: $caption;
+  font-style: normal;
+}
+
+.review__text {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
