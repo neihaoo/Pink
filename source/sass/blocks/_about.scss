@@ -15,9 +15,13 @@
 .about__items {
   width: 280px;
   margin: 0 auto;
-  padding: 54px 20px 40px;
+  padding: 54px 20px 280px;
 
   list-style: none;
+
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center 510px;
 }
 
 .about__title {
@@ -32,4 +36,32 @@
 .about__text {
   margin-top: 0;
   margin-bottom: 35px;
+}
+
+@media (min-width: $tablet) {
+  .about__slogan {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .about__items {
+    width: 310px;
+    padding-bottom: 0;
+    padding-left: 330px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .about__slogan {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .about__items {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
 }

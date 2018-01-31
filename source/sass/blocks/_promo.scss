@@ -1,0 +1,25 @@
+.promo {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+  .promo {
+    display: block;
+  }
+
+  .promo__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .promo {
+    background-color: $bkg-second;
+  }
+
+  .promo__wrapper {
+    width: 920px;
+  }
+}

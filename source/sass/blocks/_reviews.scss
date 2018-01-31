@@ -3,3 +3,17 @@
   margin: 0 auto;
   padding: 50px 20px 40px;
 }
+
+@media (min-width: $tablet) {
+  .reviews {
+    width: 620px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .reviews {
+    width: 940px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

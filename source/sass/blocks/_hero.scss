@@ -1,6 +1,4 @@
 .hero {
-  width: 320px;
-  height: 236px;
   margin: 0 auto;
 
   text-align: center;
@@ -13,13 +11,17 @@
   background-size: cover;
 
   &--index {
-    height: 462px;
+    padding-top: 462px;
 
     background-image: url("../img/iphone-hand-mobile@1x.png"),
       url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: left bottom, center;
-    background-size: auto, cover;
+    background-position: 0 176px, top center;
+    background-size: auto, auto 462px;
+
+    .hero__title {
+      display: none;
+    }
   }
 }
 
@@ -29,4 +31,37 @@
 
   font-weight: 300;
   font-size: 24px;
+}
+
+@media (min-width: $tablet) {
+  .hero {
+    background-color: transoarent;
+
+    &--index {
+      padding-top: 182px;
+
+      background-position: 0 176px, top center;
+      background-size: auto, cover;
+    }
+  }
+
+  .hero__wrapper {
+    width: 660px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop) {
+  .hero {
+    background-color: transoarent;
+
+    &--index {
+      padding-top: 200px;
+    }
+  }
+
+  .hero__wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
 }

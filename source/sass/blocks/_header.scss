@@ -4,3 +4,21 @@
 
   background-color: $main;
 }
+
+@media (min-width: $tablet) {
+  .header {
+    width: 660px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .header {
+    width: 960px;
+  }
+
+  .header__wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}

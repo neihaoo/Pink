@@ -7,3 +7,17 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+
+@media (min-width: $tablet) {
+  .upload-form__filter {
+    width: 620px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .upload-form__filter {
+    width: 940px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

@@ -1,5 +1,4 @@
 .app-links {
-  width: 280px;
   margin: 0 auto;
   padding: 28px 20px;
 
@@ -8,4 +7,20 @@
   color: $bkg-main;
 
   background-color: $main;
+}
+
+@media (min-width: $tablet) {
+  .app-links {
+    width: 300px;
+    margin: 0;
+
+    background-color: transparent;
+  }
+}
+
+@media (min-width: $desktop) {
+  .app-links {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
