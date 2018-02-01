@@ -9,4 +9,12 @@
   font-family: "Open Sans", "Arial", sans-serif;
   color: $main;
   font-style: normal;
+
+  @media (min-width: $tablet) {
+    min-width: 660px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 960px;
+  }
 }

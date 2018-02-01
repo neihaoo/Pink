@@ -1,0 +1,38 @@
+.promo {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: $bkg-second;
+  }
+}
+
+.promo__title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.promo__link {
+  color: $element;
+}
+
+.promo__wrapper {
+  @media (min-width: $tablet) {
+    width: 310px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 330px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 570px;
+    padding-right: 10px;
+    padding-left: 380px;
+  }
+}

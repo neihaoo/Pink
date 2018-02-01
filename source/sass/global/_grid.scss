@@ -1,5 +1,9 @@
+.page {
+  box-shadow: inset 0 0 0 2px black;
+}
+
 .header {
-  box-shadow: 0 0 0 2px red;
+  box-shadow: inset 0 0 0 2px red;
 }
 
 .nav {
@@ -7,11 +11,15 @@
 }
 
 .nav__items {
-  box-shadow: inset 0 0 0 2px yellow;
+  box-shadow: inset 0 0 0 2px green;
 }
 
 .hero {
   box-shadow: inset 0 0 0 2px blue;
+}
+
+.hero__wrapper {
+  box-shadow: inset 0 0 0 2px orange;
 }
 
 .app-links {
@@ -19,15 +27,27 @@
 }
 
 .about {
-  box-shadow: 0 0 0 2px red;
+  box-shadow: inset 0 0 0 2px red;
 }
 
 .about__wrapper-main {
   box-shadow: inset 0 0 0 2px yellow;
 }
 
+.about__wrapper-inner {
+  box-shadow: inset 0 0 0 2px green;
+}
+
 .about__items {
   box-shadow: inset 0 0 0 2px blue;
+}
+
+.promo {
+  box-shadow: inset 0 0 0 2px orange;
+}
+
+.promo__wrapper {
+  box-shadow: inset 0 0 0 2px purple;
 }
 
 .slogan {
@@ -35,7 +55,7 @@
 }
 
 .reviews {
-  box-shadow: 0 0 0 2px red;
+  box-shadow: inset 0 0 0 2px red;
 }
 
 .reviews__wrapper {
@@ -43,7 +63,7 @@
 }
 
 .price {
-  box-shadow: 0 0 0 2px purple;
+  box-shadow: inset 0 0 0 2px purple;
 }
 
 .price__wrapper {
@@ -67,35 +87,47 @@
 }
 
 .photos {
-  box-shadow: inset 0 0 0 2px pink;
+  box-shadow: inset 0 0 0 2px purple;
 }
 
 .photo {
-  box-shadow: 0 0 0 2px yellow;
+  box-shadow: inset 0 0 0 2px yellow;
 }
 
 .photos-upload {
-  box-shadow: 0 0 0 2px red;
+  box-shadow: inset 0 0 0 2px red;
+}
+
+.photos-upload__offer {
+  box-shadow: inset 0 0 0 2px yellow;
 }
 
 .upload-form {
   box-shadow: inset 0 0 0 2px blue;
 }
 
-.contest__form {
+.upload-form__filter {
   box-shadow: inset 0 0 0 2px green;
 }
 
-.contest__wrapper {
+.contest__form {
   box-shadow: inset 0 0 0 2px orange;
+}
+
+.contest__wrapper-fullname,
+.contest__wrapper-trip,
+.contest__wrapper-contacts,
+.contest__wrapper-app,
+.contest__wrapper-submit {
+  box-shadow: inset 0 0 0 2px green;
 }
 
 .footer {
-  box-shadow: inset 0 0 0 2px orange;
+  box-shadow: inset 0 0 0 2px red;
 }
 
 .footer__wrapper {
-  box-shadow: inset 0 0 0 2px green;
+  box-shadow: inset 0 0 0 2px orange;
 }
 
 .modal {

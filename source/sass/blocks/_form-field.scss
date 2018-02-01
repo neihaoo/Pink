@@ -2,6 +2,14 @@
   border: none;
 }
 
+.form-field__wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .form-field__item {
   margin-bottom: 20px;
 }
