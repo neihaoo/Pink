@@ -8,19 +8,6 @@
 
 .nav {
   box-shadow: inset 0 0 0 2px yellow;
-  min-height: 325px;
-}
-
-@media (min-width: $tablet) {
-  .nav {
-    min-height: 365px;
-  }
-}
-
-@media (min-width: $desktop) {
-  .nav {
-    min-height: 110px;
-  }
 }
 
 .nav__items {
@@ -29,19 +16,6 @@
 
 .hero {
   box-shadow: inset 0 0 0 2px blue;
-  min-height: 171px;
-}
-
-@media (min-width: $tablet) {
-  .hero {
-    min-height: 330px;
-  }
-}
-
-@media (min-width: $desktop) {
-  .hero {
-    min-height: 284px;
-  }
 }
 
 .hero__wrapper {
@@ -110,60 +84,14 @@
 
 .offer {
   box-shadow: inset 0 0 0 2px green;
-  min-height: 74px;
-}
-
-@media (min-width: $tablet) {
-  .offer {
-    min-height: 118px;
-  }
-}
-
-@media (min-width: $desktop) {
-  .offer {
-    min-height: 100px;
-  }
 }
 
 .photos {
   box-shadow: inset 0 0 0 2px purple;
-  min-height: 2486px;
-}
-
-@media (min-width: $tablet) {
-  .photos {
-    min-height: 455px;
-  }
-}
-
-@media (min-width: $desktop) {
-  .photos {
-    min-height: 555px;
-  }
 }
 
 .photo {
   box-shadow: inset 0 0 0 2px yellow;
-}
-
-@media (min-width: $tablet) {
-  .photo {
-    min-height: 455px;
-
-    &--best {
-      min-height: 630px;
-    }
-  }
-}
-
-@media (min-width: $desktop) {
-  .photo {
-    min-height: 555px;
-
-    &--best {
-      min-height: 602px;
-    }
-  }
 }
 
 .photos-upload {
@@ -172,19 +100,6 @@
 
 .photos-upload__offer {
   box-shadow: inset 0 0 0 2px yellow;
-  min-height: 82px;
-}
-
-@media (min-width: $tablet) {
-  .photos-upload__offer {
-    min-height: 104px;
-  }
-}
-
-@media (min-width: $desktop) {
-  .photos-upload__offer {
-    min-height: 61px;
-  }
 }
 
 .upload-form {
@@ -193,43 +108,17 @@
 
 .upload-form__filter {
   box-shadow: inset 0 0 0 2px green;
-  min-height: 757px;
-}
-
-@media (min-width: $tablet) {
-  .upload-form__filter {
-    min-height: 511px;
-  }
-}
-
-@media (min-width: $desktop) {
-  .upload-form__filter {
-    min-height: 514px;
-  }
 }
 
 .contest__form {
   box-shadow: inset 0 0 0 2px orange;
-  min-height: 2059px;
 }
 
-@media (min-width: $tablet) {
-  .contest__form {
-    min-height: 2219px;
-  }
-}
-
-@media (min-width: $desktop) {
-  .contest__form {
-    min-height: 1300px;
-  }
-}
-
-.contest__field {
-  box-shadow: inset 0 0 0 2px red;
-}
-
-.contest__wrapper {
+.contest__wrapper-fullname,
+.contest__wrapper-trip,
+.contest__wrapper-contacts,
+.contest__wrapper-app,
+.contest__wrapper-submit {
   box-shadow: inset 0 0 0 2px green;
 }
 
@@ -239,19 +128,6 @@
 
 .footer__wrapper {
   box-shadow: inset 0 0 0 2px orange;
-  min-height: 284px;
-}
-
-@media (min-width: $tablet) {
-  .footer__wrapper {
-    min-height: 127px;
-  }
-}
-
-@media (min-width: $desktop) {
-  .footer__wrapper {
-    min-height: 197px;
-  }
 }
 
 .modal {

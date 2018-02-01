@@ -39,7 +39,7 @@
         <p class="offer__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
       </div>
       <form class="contest__form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="contest__wrapper">
+        <div class="contest__wrapper-fullname">
           <fieldset class="contest__field form-field">
             <div class="form-field__item">
               <label for="lastname" class="form-field__label form-field__label--colored">Фамилия:</label>
@@ -55,9 +55,10 @@
             </div>
           </fieldset>
         </div>
-        <div class="contest__wrapper contest__wrapper--colored">
+        <div class="contest__wrapper-trip">
           <fieldset class="contest__field form-field">
             <legend class="form-field__title">Ваши безбашенные достижения в путешествии</legend>
+            <div class="form-field__wrapper">
             <div class="form-field__item">
               <input id="shark" class="form-field__checkbox" type="checkbox" name="shark" checked>
               <label for="shark" class="form-field__label">Сделал селфи с акулой</label>
@@ -82,9 +83,10 @@
               <input id="hotel" class="form-field__checkbox" type="checkbox" name="hotel">
               <label for="hotel" class="form-field__label">Разгромил отель</label>
             </div>
+            </div>
           </fieldset>
         </div>
-        <div class="contest__wrapper">
+        <div class="contest__wrapper-contacts">
           <fieldset class="contest__field form-field">
             <div class="form-field__item">
               <label for="telephone" class="form-field__label form-field__label--colored">Номер телефона</label>
@@ -96,7 +98,7 @@
             </div>
           </fieldset>
         </div>
-        <div class="contest__wrapper contest__wrapper--colored">
+        <div class="contest__wrapper-app">
           <fieldset class="contest__field form-field">
             <legend class="form-field__title">С каким приложением путешествовали?</legend>
             <div class="form-field__item">
@@ -113,7 +115,7 @@
             </div>
           </fieldset>
         </div>
-        <div class="contest__wrapper">
+        <div class="contest__wrapper-comment">
           <fieldset class="contest__field form-field">
             <div class="form-field__item">
               <label for="comment" class="form-field__label form-field__label--colored">Опишите свои эмоции</label>
@@ -121,7 +123,7 @@
             </div>
           </fieldset>
         </div>
-        <div class="contest__wrapper">
+        <div class="contest__wrapper-submit">
           <button class="button button--square" type="submit">Отправить форму</button>
           <p class="contest__text">
             <sup class="contest__text contest__text--colored">*</sup> — обязательные поля

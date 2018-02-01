@@ -2,39 +2,32 @@
   width: 280px;
   margin: 0 auto;
   padding: 55px 20px;
+
+  @media (min-width: $tablet) {
+    width: 620px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 940px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 
 .photos__wrapper {
   width: 280px;
   margin: 0 auto;
   padding: 0 20px;
-}
 
-@media (min-width: $tablet) {
-  .photos__offer {
-    width: 620px;
-  }
-
-  .photos__wrapper {
+  @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 620px;
     padding-top: 50px;
   }
-}
 
-@media (min-width: $desktop) {
-  .photos__offer {
-    width: 940px;
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
-  .photos__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  @media (min-width: $desktop) {
     width: 940px;
     padding-right: 10px;
     padding-left: 10px;

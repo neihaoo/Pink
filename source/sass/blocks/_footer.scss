@@ -2,16 +2,15 @@
   width: 280px;
   margin: 0 auto;
   padding: 0 20px;
-}
+  text-align: center;
 
-@media (min-width: $tablet) {
-  .footer__wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
     width: 620px;
   }
-}
 
-@media (min-width: $desktop) {
-  .footer__wrapper {
+  @media (min-width: $desktop) {
     width: 940px;
     padding-top: 28px;
     padding-right: 10px;

@@ -1,11 +1,23 @@
 .photo {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    width: 300px;
+
+    &--best {
+      margin: 0;
+    }
+  }
 }
 
 .photo__caption {
   padding: 25px 20px;
 
   background-color: $bkg-second;
+
+  @media (min-width: $tablet) {
+    flex-grow: 1;
+  }
 }
 
 .photo__author {
@@ -29,30 +41,4 @@
   font-size: 12px;
   line-height: 24px;
   color: $element;
-}
-
-@media (min-width: $tablet) {
-  .photo {
-    flex-basis: 300px;
-    min-height: 455px;
-
-    &--best {
-      margin: 0;
-    }
-  }
-}
-
-@media (min-width: $desktop) {
-  .photo {
-    min-height: 555px;
-  }
-
-  .photo:not(.photo--best) {
-    margin-right: 20px;
-    margin-bottom: 54px;
-
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
-  }
 }
