@@ -1,6 +1,5 @@
 @import "global/colors";
 @import "global/sizes";
-@import "global/grid";
 @import "global/mixin";
 @import "global/fonts";
 @import "blocks/page";
@@ -29,3 +28,9 @@
 @import "blocks/footer";
 @import "blocks/social";
 @import "blocks/modal";
+@import "blocks/tab-controls";
+@import "blocks/range";
+@import "blocks/nojs";
+@import "blocks/text-input";
+@import "blocks/checkbox-input";
+@import "blocks/radio-input";

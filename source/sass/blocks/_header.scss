@@ -1,11 +1,11 @@
 .header {
   margin: 0 auto;
 
-  background-color: $main;
+  background-color: $main-color;
 }
 
 .header__wrapper {
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;

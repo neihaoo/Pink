@@ -1,19 +1,70 @@
 .app-links {
+  position: relative;
+
   width: 280px;
   margin: 0 auto;
-  padding: 28px 20px;
+  padding: 27px 20px 30px;
 
   font-weight: 300;
   text-align: center;
-  color: $bkg-main;
+  color: $bkg-main-color;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet-width) {
     width: 300px;
     margin: 0;
+    padding: 0;
   }
 
-  @media (min-width: $desktop) {
-    padding-right: 10px;
-    padding-left: 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -287px;
+    left: 0;
+
+    width: 258px;
+    height: 286px;
+
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.app-links__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 275px;
+    margin: 0 auto 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.app-links__button {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 64px;
+  }
+}
+
+.app-links__text {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
   }
 }

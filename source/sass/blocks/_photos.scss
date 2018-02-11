@@ -1,15 +1,18 @@
 .photos__offer {
-  width: 280px;
+  width: 253px;
   margin: 0 auto;
-  padding: 55px 20px;
+  padding: 45px 20px 49px;
 
-  @media (min-width: $tablet) {
-    width: 620px;
+  @media (min-width: $tablet-width) {
+    width: 570px;
+    padding-top: 92px;
+    padding-bottom: 76px;
   }
 
-  @media (min-width: $desktop) {
-    width: 940px;
+  @media (min-width: $desktop-width) {
+    width: 640px;
     padding-right: 10px;
+    padding-bottom: 88px;
     padding-left: 10px;
   }
 }
@@ -19,17 +22,26 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 620px;
-    padding-top: 50px;
+    margin-bottom: 45px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     width: 940px;
+    margin-bottom: 5px;
     padding-right: 10px;
     padding-left: 10px;
+  }
+}
+
+.photos__item {
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
   }
 }

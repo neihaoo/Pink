@@ -1,36 +1,228 @@
 .nav {
+  position: relative;
+
+  width: 100%;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  color: $bkg-main;
+  color: $bkg-main-color;
   text-transform: uppercase;
 
-  background-color: transparent;
+  background-color: $main-color;
 
-  &--opened {
-    background-color: $main;
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: none;
+
+    background-color: transparentize($caption-color, 0.7);
+  }
+
+  &--closed {
+    background-color: transparentize($caption-color, 0.7);
   }
 }
 
-.nav__logo {
-  display: inline-block;
+.nav__toggle {
+  position: absolute;
+  top: 21px;
+  right: 22px;
+  z-index: 2;
+
+  display: block;
+  width: 50px;
+  height: 24px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.nav--opened .nav__items {
+  @media (max-width: $nav-open-width) {
+    position: absolute;
+    z-index: 1;
+
+    width: 100%;
+
+    background-color: $main-color;
+  }
+}
+
+.nav--opened .nav__toggle {
+  width: 24px;
+  height: 24px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+    width: 30px;
+    height: 4px;
+
+    background-color: $bkg-main-color;
+  }
+
+  &::before {
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $element-color;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: transparentize($element-color, 0.7);
+  }
+}
+
+.nav--closed .nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 50px;
+  height: 4px;
+
+  background-color: $bkg-main-color;
+  box-shadow: 0 10px 0 0 $bkg-main-color,
+    0 20px 0 0 $bkg-main-color;
+}
+
+.nav--closed .nav__toggle:hover::before {
+  background-color: $element-color;
+  box-shadow: 0 10px 0 0 $element-color,
+    0 20px 0 0 $element-color;
+}
+
+.nav--closed .nav__toggle:active::before {
+  background-color: transparentize($element-color, 0.7);
+  box-shadow: 0 10px 0 0 transparentize($element-color, 0.7),
+    0 20px 0 0 transparentize($element-color, 0.7);
+}
+
+.nav--closed .nav__items {
+  @media (max-width: $nav-open-width) {
+    display: none;
+  }
+}
+
+.nav__wrapper-main {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+.nav__wrapper-inner {
+  padding: 22px 20px 15px;
+
+  border-bottom: 1px solid $caption-color;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 26px;
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
+    padding-right: 0;
+    padding-left: 0;
+
+    border: none;
+  }
+}
+
+.nav__logo-image {
   width: 75px;
-  height: 22px;
-  margin: 22px 20px 25px;
+  height: 23px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+
+.nav__logo-tablet {
+  display: none;
+  width: 147px;
+  height: 41px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+
+    fill: $bkg-main-color;
+  }
 }
 
 .nav__items {
   @include clear-list;
 
   text-align: center;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 621px;
+  }
+}
+
+.nav__item {
+  border-top: 1px solid transparentize($bkg-main-color, 0.85);
+  border-bottom: 1px solid $caption-color;
+
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
 }
 
 .nav__link {
   display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 0;
 
-  color: $bkg-main;
+  color: $bkg-main-color;
   text-decoration: none;
+
+  &--active {
+    @media (min-width: $desktop-width) {
+      border-bottom: 2px solid $bkg-main-color;
+    }
+  }
+
+  &:hover {
+    color: $element-color;
+  }
+
+  &:active {
+    color: transparentize($element-color, 0.7);
+
+    @media (min-width: $desktop-width) {
+      color: transparentize($bkg-main-color, 0.7);
+    }
+  }
 }

@@ -1,18 +1,72 @@
 .review {
-  margin: 0;
+  display: none;
 
   line-height: 30px;
   text-align: center;
+
+  &--active {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 790px;
+      padding-top: 112px;
+
+      background-image: url("http://placehold.it/79x63");
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+  }
 }
 
 .review__author {
   font-weight: 700;
   font-size: 18px;
-  color: $caption;
+  color: $caption-color;
   font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 2px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 2px;
+
+    font-size: 24px;
+  }
+}
+
+.review__author-info {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    order: -1;
+
+    font-weight: 400;
+    font-size: 14px;
+    color: $main-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .review__text {
-  margin-top: 25px;
-  margin-bottom: 40px;
+  margin-top: 11px;
+  margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    font-size: 18px;
+  }
 }
