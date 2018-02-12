@@ -89,7 +89,7 @@
           </li>
           <li class="about__item">
             <h3 class="about__title">Меняет мир вокруг</h3>
-            <p class="about__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <p class="about__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
           </li>
           <li class="about__item">
             <h3 class="about__title">Заводит новых друзей</h3>
@@ -100,8 +100,8 @@
     </section>
     <section class="promo">
       <div class="promo__wrapper">
-        <h2 class="promo__title">Эффект <br>на 24 часа!</h2>
-        <p class="promo__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <h2 class="promo__title">Эффект на&nbsp;24 часа!</h2>
+        <p class="promo__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
         <a class="promo__link" href="#">Узнать больше об исследовании</a>
       </div>
     </section>
@@ -267,11 +267,12 @@
         <svg class="contacts__map-decor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="595.28px" height="61.905px" viewbox="0 0 595.28 61.905" enable-background="new 0 0 595.28 61.905" xml:space="preserve">
           <polygon fill="#ffffff" points="297.64,61.905 0,0 595.28,0 "/>
         </svg>
-        <picture>
+        <picture class="visually-hidden">
           <source media="(min-width: 960px)" srcset="http://placehold.it/960x486">
           <source media="(min-width: 660px)" srcset="http://placehold.it/660x373">
-          <img class="map" src="img/bg-map-mobile@1x.png" alt="Карта проезда">
+          <img class="map-image" src="img/bg-map-mobile@1x.png" alt="Карта проезда">
         </picture>
+        <div class="contacts__map-google"></div>
       </div>
     </section>
   </main>
@@ -333,6 +334,7 @@
       </div>
     </div>
   </footer>
-  <!-- <script async defer src="js/script.js"></script> -->
+  <!-- <script async defer src="js/script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsSwO95vU2cD1QXJixqHcH2RSK7hbFp_w&callback=initMap"></script> -->
 </body>
 </html>

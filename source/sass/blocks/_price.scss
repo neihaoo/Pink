@@ -12,17 +12,17 @@
 .price__wrapper {
   width: 320px;
   margin: 0 auto;
-  padding: 88px 0 47px;
+  padding: 88px 0 50px;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
     width: 620px;
-    padding: 85px 20px 28px;
+    padding: 85px 20px 25px;
   }
 
   @media (min-width: $desktop-width) {
     width: 940px;
-    padding: 143px 10px 55px;
+    padding: 142px 10px 52px;
   }
 }
 
@@ -77,8 +77,8 @@
     &::before {
       content: "Хит";
       position: absolute;
-      top: 10px;
-      left: 11px;
+      top: 12px;
+      left: 9px;
       z-index: 1;
 
       font-weight: 400;
@@ -145,7 +145,7 @@
     font-size: 18px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     font-size: 24px;
   }
 }

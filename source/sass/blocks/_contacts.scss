@@ -115,6 +115,25 @@
 
 .contacts__map {
   position: relative;
+
+  min-height: 200px;
+
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto;
+
+  @media (min-width: $tablet-width) {
+    min-height: 373px;
+
+    background-image: url("http://placehold.it/660x373");
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 486;
+
+    background-image: url("http://placehold.it/960x486");
+  }
 }
 
 .contacts__map-decor {
@@ -125,4 +144,17 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.contacts__map-google {
+  width: 100%;
+  min-height: 200px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 373px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 486px;
+  }
 }

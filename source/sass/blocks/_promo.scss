@@ -11,6 +11,7 @@
 }
 
 .promo__title {
+  width: 205px;
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -20,13 +21,8 @@
   color: $caption-color;
 
   @media (min-width: $desktop-width) {
+    width: auto;
     margin-bottom: 21px;
-  }
-
-  br {
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
   }
 }
 
@@ -37,7 +33,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 520px;
     margin-bottom: 30px;
 
     font-size: 18px;
@@ -72,6 +67,7 @@
     width: 570px;
     padding-top: 123px;
     padding-right: 10px;
+    padding-bottom: 113px;
     padding-left: 373px;
 
     background-image: url("http://placehold.it/298x345");

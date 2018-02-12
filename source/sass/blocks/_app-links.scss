@@ -35,12 +35,13 @@
 
 .app-links__wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-end;
-  margin-bottom: 14px;
+  width: 242px;
+  margin: 0 auto 14px;
 
   @media (min-width: $tablet-width) {
-    width: 275px;
+    width: 245px;
     margin: 0 auto 31px;
   }
 
