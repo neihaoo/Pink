@@ -1,0 +1,110 @@
+.text-input {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
+
+  &--fullname {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.text-input--contacts {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 22px;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("http://placehold.it/20x20");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.text-input--contacts .text-input__label {
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+.text-input--contacts .text-input__input {
+  @media (min-width: $tablet-width) {
+    padding-right: 18px;
+    padding-left: 18px;
+
+    border-right-width: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 375px;
+  }
+}
+
+.text-input__label {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 22px;
+
+  font-size: 14px;
+  line-height: 30px;
+  color: $element-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 18px;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+.text-input__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 20px 15px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Open Sans", "Arial", sans-serif;
+
+  border: 2px solid $disabled-color;
+  border-radius: 2px;
+
+  &:hover {
+    border-color: $main-color;
+  }
+
+  &:focus {
+    border-color: $element-color;
+  }
+}

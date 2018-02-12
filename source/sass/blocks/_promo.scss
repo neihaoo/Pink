@@ -1,38 +1,76 @@
 .promo {
   display: none;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet-width) {
     display: block;
   }
 
-  @media (min-width: $desktop) {
-    background-color: $bkg-second;
+  @media (min-width: $desktop-width) {
+    background-color: $bkg-second-color;
   }
 }
 
 .promo__title {
-  margin: 0;
+  width: 205px;
+  margin-top: 0;
+  margin-bottom: 10px;
 
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  color: $caption-color;
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin-bottom: 21px;
+  }
+}
+
+.promo__text {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .promo__link {
-  color: $element;
+  color: $element-color;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .promo__wrapper {
-  @media (min-width: $tablet) {
-    width: 310px;
+  @media (min-width: $tablet-width) {
+    width: 300px;
     margin: 0 auto;
+    padding-top: 96px;
     padding-right: 20px;
-    padding-left: 330px;
+    padding-bottom: 115px;
+    padding-left: 319px;
+
+    background-image: url("http://placehold.it/238x276");
+    background-repeat: no-repeat;
+    background-position: 11px 59px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     width: 570px;
+    padding-top: 123px;
     padding-right: 10px;
-    padding-left: 380px;
+    padding-bottom: 113px;
+    padding-left: 373px;
+
+    background-image: url("http://placehold.it/298x345");
+    background-position: 8px 32px;
   }
 }

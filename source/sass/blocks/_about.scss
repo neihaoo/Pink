@@ -7,51 +7,58 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet-width) {
     width: 620px;
-    margin: 0 auto;
+    margin-top: 29px;
+    margin-bottom: 28px;
     padding: 0 20px;
   }
 
-  @media (min-width: $desktop) {
-    width: 940px;
-    margin: 0 auto;
+  @media (min-width: $desktop-width) {
+    width: 920px;
+    margin-top: 47px;
+    margin-bottom: 57px;
     padding: 0 10px;
   }
 }
 
 .about__wrapper-main {
-  background-color: $bkg-second;
+  background-color: $bkg-second-color;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: -6px top;
+  background-size: 100% auto;
 }
 
 .about__items {
   width: 280px;
   margin: 0 auto;
-  padding: 54px 20px 280px;
+  padding: 78px 20px 287px;
 
   list-style: none;
 
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: center 510px;
+  background-position: center 504px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet-width) {
     width: 310px;
-    padding-bottom: 10px;
-    padding-left: 330px;
+    padding-top: 73px;
+    padding-bottom: 9px;
+    padding-left: 329px;
 
     text-align: left;
 
-    background-position: 20px 10px;
-    background-size: 268px;
+    background-image: url("http://placehold.it/268x485");
+    background-position: 20px bottom;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
-    width: 940px;
+    width: 880px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 40px;
 
     text-align: center;
 
@@ -61,22 +68,42 @@
 
 .about__title {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 18px;
-  color: $caption;
+  color: $caption-color;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .about__text {
-  margin-top: 0;
-  margin-bottom: 35px;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .about__item {
-  @media (min-width: $desktop) {
-    width: 190px;
-    padding-right: 30px;
-    padding-left: 30px;
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 240px;
+    padding-top: 356px;
+
+    background-image: url("http://placehold.it/186x300");
+    background-repeat: no-repeat;
+    background-position: top;
   }
 }

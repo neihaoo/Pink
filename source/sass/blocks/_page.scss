@@ -7,14 +7,19 @@
   font-size: 14px;
   line-height: 24px;
   font-family: "Open Sans", "Arial", sans-serif;
-  color: $main;
+  color: $main-color;
   font-style: normal;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet-width) {
     min-width: 660px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     min-width: 960px;
   }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

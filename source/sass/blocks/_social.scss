@@ -1,3 +1,38 @@
 .social__items {
   @include clear-list;
+
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 176px;
+  margin: 0 auto;
+}
+
+.social__link {
+  position: relative;
+
+  display: block;
+  width: 45px;
+  height: 43px;
+
+  border: 3px solid transparentize($main-color, 0.9);
+  border-radius: 50px;
+
+  &:hover {
+    border-color: $main-color;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.social__link-image {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  fill: $element-color;
 }

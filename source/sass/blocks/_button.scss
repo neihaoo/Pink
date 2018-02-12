@@ -1,24 +1,109 @@
 .button {
+  display: block;
+  padding: 14px 20px 17px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  color: $bkg-main;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $bkg-main-color;
   text-decoration: none;
 
   background-color: transparent;
+  border: 3px solid $bkg-main-color;
+  border-radius: 50px;
+  cursor: pointer;
+
+  &:hover {
+    color: $element-color;
+
+    background-color: $bkg-main-color;
+  }
+
+  &:active {
+    color: transparentize($element-color, 0.7);
+  }
+
+  &--index {
+    @media (min-width: $desktop-width) {
+      font-size: 21px;
+    }
+  }
 
   &--colored {
-    color: $element;
+    width: 100%;
+
+    color: $element-color;
+
+    border-color: $element-color;
+
+    @media (min-width: $desktop-width) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: $bkg-main-color;
+
+      background-color: $element-color;
+    }
+
+    &:active {
+      color: transparentize($bkg-main-color, 0.7);
+    }
   }
 
   &--disabled {
-    color: $main;
+    width: 100%;
+
+    color: transparentize($main-color, 0.9);
+
+    border-color: transparentize($main-color, 0.9);
+
+    &:hover {
+      color: transparentize($main-color, 0.7);
+
+      background-color: transparent;
+      border-color: transparentize($main-color, 0.7);
+    }
+
+    &:active {
+      color: transparentize($bkg-main-color, 0.7);
+
+      background-color: transparentize($main-color, 0.7);
+      border-color: transparentize($main-color, 0.7);
+    }
   }
 
   &--square {
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 14px;
+
     line-height: 30px;
     text-transform: uppercase;
 
-    background-color: $btn-square;
+    background-color: $btn-square-color;
+    border-color: $btn-square-color;
+    border-radius: 2px;
+
+    @media (min-width: $tablet-width) {
+      width: 300px;
+    }
+
+    &:hover {
+      color: $bkg-main-color;
+
+      background-color: $btn-square-color--hover;
+      border-color: $btn-square-color--hover;
+    }
+
+    &:active {
+      color: transparentize($bkg-main-color, 0.7);
+    }
+
+    &:disabled {
+      background-color: $disabled-color;
+      border-color: $disabled-color;
+    }
   }
 }
