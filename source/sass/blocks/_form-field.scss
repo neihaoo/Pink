@@ -2,7 +2,7 @@
   border: none;
 
   &--bordered {
-    @media (min-width: $tablet-width) {
+    @include tablet {
       padding-top: 9px;
       padding-right: 58px;
       padding-bottom: 13px;
@@ -13,17 +13,17 @@
   }
 
   &--checkbox {
-    @media (min-width: $tablet-width) {
+    @include tablet {
       padding-bottom: 1px;
     }
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       padding-bottom: 8px;
     }
   }
 
   &--radio {
-    @media (min-width: $desktop-width) {
+    @include desktop {
       padding-top: 11px;
       padding-right: 20px;
       padding-bottom: 16px;
@@ -33,29 +33,29 @@
 }
 
 .form-field__wrapper-main {
-  margin-top: 4px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-top: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  margin-top: 4px;
 }
 
 .form-field__item {
-  margin-bottom: 17px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 31px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 23px;
   }
+
+  margin-bottom: 17px;
 }
 
 .form-field--checkbox .form-field__item {
@@ -63,36 +63,36 @@
 }
 
 .form-field--radio .form-field__item {
-  margin-bottom: 45px;
-
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 44px;
     margin-left: 54px;
   }
+
+  margin-bottom: 45px;
 }
 
 .form-field--fullname .form-field__item {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 52px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 53px;
   }
 
   &:last-child {
-    @media (min-width: $desktop-width) {
+    @include desktop {
       margin-bottom: 0;
     }
   }
 }
 
 .form-field__wrapper-contacts {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 12px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0;
@@ -100,6 +100,14 @@
 }
 
 .form-field__title {
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    margin-bottom: 25px;
+  }
+
   margin-bottom: 39px;
   padding: 0 20px;
 
@@ -108,55 +116,57 @@
   color: $element-color;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 40px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 25px;
-  }
-
   &--hidden {
-    display: none;
-
-    @media (min-width: $tablet-width) {
+    @include tablet {
       display: block;
       margin-bottom: 28px;
       padding-right: 30px;
       padding-left: 30px;
     }
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       margin-bottom: 25px;
     }
+
+    display: none;
   }
 }
 
 .form-field--radio .form-field__title {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 40px;
   }
 }
 
 .form-field--checkbox .form-field__title {
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 39px;
   }
 }
 
 .form-field--comments .form-field__title {
-  margin-bottom: 16px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 28px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 25px;
   }
+
+  margin-bottom: 16px;
 }
 
 .form-field__textarea {
+  @include tablet {
+    max-width: 500px;
+    min-height: 193px;
+  }
+
+  @include desktop {
+    max-width: 820px;
+    min-height: 128px;
+  }
+
   box-sizing: border-box;
   width: 100%;
   max-width: 280px;
@@ -170,16 +180,6 @@
 
   border: 2px solid $disabled-color;
   border-radius: 2px;
-
-  @media (min-width: $tablet-width) {
-    max-width: 500px;
-    min-height: 193px;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 820px;
-    min-height: 128px;
-  }
 
   &:hover {
     border-color: $main-color;

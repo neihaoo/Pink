@@ -1,16 +1,21 @@
 .promo {
-  display: none;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: block;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     background-color: $bkg-second-color;
   }
+
+  display: none;
 }
 
 .promo__title {
+  @include desktop {
+    width: auto;
+    margin-bottom: 21px;
+  }
+
   width: 205px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -19,20 +24,15 @@
   font-size: 30px;
   line-height: 36px;
   color: $caption-color;
-
-  @media (min-width: $desktop-width) {
-    width: auto;
-    margin-bottom: 21px;
-  }
 }
 
 .promo__text {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin: 0;
     margin-bottom: 10px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 30px;
 
     font-size: 18px;
@@ -41,16 +41,16 @@
 }
 
 .promo__link {
-  color: $element-color;
-
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 18px;
     line-height: 30px;
   }
+
+  color: $element-color;
 }
 
 .promo__wrapper {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 300px;
     margin: 0 auto;
     padding-top: 96px;
@@ -58,19 +58,69 @@
     padding-bottom: 115px;
     padding-left: 319px;
 
-    background-image: url("http://placehold.it/238x276");
+    background-image: url("../img/icon-timer.svg");
     background-repeat: no-repeat;
     background-position: 11px 59px;
+    background-size: 238px auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 570px;
     padding-top: 123px;
     padding-right: 10px;
     padding-bottom: 113px;
     padding-left: 373px;
 
-    background-image: url("http://placehold.it/298x345");
     background-position: 8px 32px;
+    background-size: 298px auto;
+  }
+
+  position: relative;
+
+  &::before {
+    @include tablet {
+      content: "24";
+      position: absolute;
+      top: 135px;
+      left: 74px;
+
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 149.47px;
+      color: $element-color;
+    }
+
+    @include desktop {
+      top: 127px;
+      left: 86px;
+
+      font-size: 120px;
+      line-height: 186.84px;
+    }
+  }
+
+  &::after {
+    @include tablet {
+      content: "";
+      position: absolute;
+      bottom: 107px;
+      left: 29px;
+
+      width: 172px;
+      height: 172px;
+
+      border: 15px solid $element-color;
+      border-radius: 50%;
+    }
+
+    @include desktop {
+      bottom: 90px;
+      left: 29px;
+
+      width: 219px;
+      height: 219px;
+
+      border: 17px solid $element-color;
+    }
   }
 }

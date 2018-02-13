@@ -5,7 +5,7 @@
 }
 
 .header__wrapper {
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;

@@ -1,4 +1,12 @@
 .nav {
+  @include desktop {
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: none;
+
+    background-color: transparentize($caption-color, 0.7);
+  }
+
   position: relative;
 
   width: 100%;
@@ -11,20 +19,20 @@
 
   background-color: $main-color;
 
-  @media (min-width: $desktop-width) {
-    font-weight: 400;
-    line-height: 18px;
-    text-transform: none;
-
-    background-color: transparentize($caption-color, 0.7);
-  }
-
   &--closed {
     background-color: transparentize($caption-color, 0.7);
   }
 }
 
 .nav__toggle {
+  @include tablet {
+    top: 44px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
   position: absolute;
   top: 21px;
   right: 22px;
@@ -38,18 +46,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-
-  @media (min-width: $tablet-width) {
-    top: 44px;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
 }
 
 .nav--opened .nav__items {
-  @media (max-width: $nav-open-width) {
+  @include nav-open {
     position: absolute;
     z-index: 1;
 
@@ -123,13 +123,13 @@
 }
 
 .nav--closed .nav__items {
-  @media (max-width: $nav-open-width) {
+  @include nav-open {
     display: none;
   }
 }
 
 .nav__wrapper-main {
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -140,65 +140,94 @@
 }
 
 .nav__wrapper-inner {
-  padding: 22px 20px 15px;
-
-  border-bottom: 1px solid $caption-color;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding-top: 26px;
     padding-bottom: 42px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 150px;
     padding-right: 0;
     padding-left: 0;
 
     border: none;
   }
+
+  padding: 22px 20px 15px;
+
+  border-bottom: 1px solid $caption-color;
+}
+
+.nav__logo:hover .nav__logo-image,
+.nav__logo:hover .nav__logo-tablet,
+.nav__logo:hover .nav__logo-desktop {
+  fill: $element-color;
+}
+
+.nav__logo:active .nav__logo-image,
+.nav__logo:active .nav__logo-tablet,
+.nav__logo:active .nav__logo-desktop {
+  fill: transparentize($bkg-main-color, 0.7);
 }
 
 .nav__logo-image {
+  @include tablet {
+    display: none;
+  }
+
   width: 75px;
   height: 23px;
 
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
+  fill: $bkg-main-color;
 }
 
-
 .nav__logo-tablet {
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
   display: none;
   width: 147px;
   height: 41px;
 
-  @media (min-width: $tablet-width) {
-    display: block;
+  fill: $bkg-main-color;
+}
 
-    fill: $bkg-main-color;
+.nav__logo-desktop {
+  @include desktop {
+    display: block;
   }
+
+  display: none;
+  width: 147px;
+  height: 41px;
+
+  fill: $bkg-main-color;
 }
 
 .nav__items {
   @include clear-list;
 
-  text-align: center;
-
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     width: 621px;
   }
+
+  text-align: center;
 }
 
 .nav__item {
-  border-top: 1px solid transparentize($bkg-main-color, 0.85);
-  border-bottom: 1px solid $caption-color;
-
-  @media (min-width: $desktop-width) {
+  @include desktop {
     border: none;
   }
+
+  border-top: 1px solid transparentize($bkg-main-color, 0.85);
+  border-bottom: 1px solid $caption-color;
 }
 
 .nav__link {
@@ -209,7 +238,7 @@
   text-decoration: none;
 
   &--active {
-    @media (min-width: $desktop-width) {
+    @include desktop {
       border-bottom: 2px solid $bkg-main-color;
     }
   }
@@ -219,10 +248,10 @@
   }
 
   &:active {
-    color: transparentize($element-color, 0.7);
-
-    @media (min-width: $desktop-width) {
+    @include desktop {
       color: transparentize($bkg-main-color, 0.7);
     }
+
+    color: transparentize($element-color, 0.7);
   }
 }

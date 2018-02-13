@@ -1,25 +1,25 @@
 .copyright {
-  line-height: 18px;
-
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 18px;
   }
+
+  line-height: 18px;
 }
 
 .copyright__image {
+  @include tablet {
+    margin-left: 11px;
+  }
+
+  @include desktop {
+    margin-left: 9px;
+  }
+
   margin-left: 10px;
 
   vertical-align: middle;
 
   fill: $element-color;
-
-  @media (min-width: $tablet-width) {
-    margin-left: 11px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 9px;
-  }
 
   &:hover {
     fill: $main-color;

@@ -3,23 +3,23 @@
 }
 
 .about__slogan {
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 620px;
     margin-top: 29px;
     margin-bottom: 28px;
     padding: 0 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 920px;
     margin-top: 47px;
     margin-bottom: 57px;
     padding: 0 10px;
   }
+
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .about__wrapper-main {
@@ -31,17 +31,17 @@
 }
 
 .about__items {
-  width: 280px;
-  margin: 0 auto;
-  padding: 78px 20px 287px;
+  @include retina {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+    background-size: 157px auto;
+  }
 
-  list-style: none;
+  @include tablet {
+    @include retina {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      background-size: 268px auto;
+    }
 
-  background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: center 504px;
-
-  @media (min-width: $tablet-width) {
     width: 310px;
     padding-top: 73px;
     padding-bottom: 9px;
@@ -49,11 +49,11 @@
 
     text-align: left;
 
-    background-image: url("http://placehold.it/268x485");
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
     background-position: 20px bottom;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     width: 880px;
@@ -64,46 +64,77 @@
 
     background-image: none;
   }
+
+  width: 280px;
+  margin: 0 auto;
+  padding: 78px 20px 287px;
+
+  list-style: none;
+
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center 504px;
 }
 
 .about__title {
+  @include desktop {
+    margin-bottom: 24px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
   margin-top: 0;
   margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 18px;
   color: $caption-color;
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 24px;
-
-    font-size: 30px;
-    line-height: 30px;
-  }
 }
 
 .about__text {
-  margin: 0;
-
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 18px;
     line-height: 30px;
   }
+
+  margin: 0;
 }
 
 .about__item {
-  margin-bottom: 31px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 34px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
+    @include retina {
+      background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      background-size: 292px auto;
+    }
+
     width: 240px;
     padding-top: 356px;
 
-    background-image: url("http://placehold.it/186x300");
+    background-image: url("../img/iphone-screen-1-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: -23px -3px;
+
+    &--color {
+      @include retina {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      }
+
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    }
+
+    &--smile {
+      @include retina {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      }
+
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    }
   }
+
+  margin-bottom: 31px;
 }

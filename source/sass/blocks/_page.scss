@@ -1,4 +1,12 @@
 .page {
+  @include tablet {
+    min-width: 660px;
+  }
+
+  @include desktop {
+    min-width: 960px;
+  }
+
   min-width: 320px;
   margin: 0;
   padding: 0;
@@ -9,14 +17,6 @@
   font-family: "Open Sans", "Arial", sans-serif;
   color: $main-color;
   font-style: normal;
-
-  @media (min-width: $tablet-width) {
-    min-width: 660px;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-width: 960px;
-  }
 }
 
 img {
