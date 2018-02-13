@@ -1,9 +1,9 @@
 .range {
-  display: none;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: block;
   }
+
+  display: none;
 
   &--active {
     position: relative;
@@ -11,6 +11,10 @@
     display: block;
 
     &::after {
+      @include tablet {
+        display: none;
+      }
+
       content: "";
       position: absolute;
       bottom: 0;
@@ -20,15 +24,19 @@
       height: 1px;
 
       background-color: rgba(40, 54, 69, 0.1);
-
-      @media (min-width: $tablet-width) {
-        display: none;
-      }
     }
   }
 }
 
 .range__line {
+  @include tablet {
+    width: 202px;
+  }
+
+  @include desktop {
+    width: 288px;
+  }
+
   position: relative;
 
   width: 240px;
@@ -36,14 +44,6 @@
   margin: 0 auto;
 
   background-color: $main-color;
-
-  @media (min-width: $tablet-width) {
-    width: 202px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 288px;
-  }
 }
 
 .range__indicator {
@@ -59,31 +59,31 @@
   cursor: pointer;
 
   &--crop {
-    right: 33px;
-
-    @media (min-width: $tablet-width) {
+    @include tablet {
       right: 42px;
     }
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       right: 202px;
     }
+
+    right: 33px;
   }
 
   &--saturation {
-    left: 25px;
-
-    @media (min-width: $desktop-width) {
+    @include desktop {
       left: 247px;
     }
+
+    left: 25px;
   }
 
   &--contrast {
-    right: 92px;
-
-    @media (min-width: $desktop-width) {
+    @include desktop {
       right: 114px;
     }
+
+    right: 92px;
   }
 
   &:active {

@@ -1,4 +1,8 @@
 .modal {
+  @include tablet {
+    width: 460px;
+  }
+
   position: fixed;
   top: 50%;
   left: 50%;
@@ -11,69 +15,65 @@
   background-color: $bkg-main-color;
   box-shadow: 0 7px 15px transparentize($caption-color, 0.85);
 
-  @media (min-width: $tablet-width) {
-    width: 460px;
-  }
-
   &--error {
-    display: none;
-    min-height: 289px;
-    margin-top: -144.5px;
-    margin-left: -160px;
-
-    @media (min-width: $tablet-width) {
+    @include tablet {
       min-height: 363px;
       margin-top: -181.5px;
       margin-left: -230px;
     }
+
+    display: none;
+    min-height: 289px;
+    margin-top: -144.5px;
+    margin-left: -160px;
   }
 
   &--ok {
-    display: none;
-    min-height: 380px;
-    margin-top: -190px;
-    margin-left: -160px;
-
-    @media (min-width: $tablet-width) {
+    @include tablet {
       min-height: 431px;
       margin-top: -215.5px;
       margin-left: -230px;
     }
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       min-width: 780px;
       min-height: 376px;
       margin-top: -188px;
       margin-left: -390px;
     }
+
+    display: none;
+    min-height: 380px;
+    margin-top: -190px;
+    margin-left: -160px;
   }
 }
 
 .modal__title {
+  @include tablet {
+    padding: 0 100px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
   margin-top: 0;
   margin-bottom: 30px;
 
   font-weight: 700;
   font-size: 18px;
   color: $caption-color;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 100px;
-
-    font-size: 30px;
-    line-height: 40px;
-  }
 }
 
 .modal__text {
-  margin-top: 0;
-  margin-bottom: 35px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 0 70px;
 
     font-size: 18px;
   }
+
+  margin-top: 0;
+  margin-bottom: 35px;
 }
 
 .modal__button {
@@ -93,12 +93,12 @@
 }
 
 .modal--ok .modal__text {
-  @media (max-width: ($tablet-width - 1px)) {
-    padding: 0 20px;
+  @include desktop {
+    padding: 0 155px;
   }
 
-  @media (min-width: $desktop-width) {
-    padding: 0 155px;
+  @media (max-width: ($tablet-width - 1px)) {
+    padding: 0 20px;
   }
 }
 

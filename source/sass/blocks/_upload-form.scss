@@ -1,20 +1,13 @@
 .upload-form {
-  background-color: $bkg-second-color;
-
-  @media (min-width: $desktop-width) {
+  @include desktop {
     background-color: $bkg-main-color;
   }
+
+  background-color: $bkg-second-color;
 }
 
 .upload-form__filter {
-  width: 280px;
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-right: 22px;
-  padding-bottom: 29px;
-  padding-left: 18px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     justify-content: space-between;
     width: 620px;
@@ -22,7 +15,7 @@
     padding: 57px 20px 54px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 800px;
     margin-bottom: 35px;
     padding-right: 60px;
@@ -31,38 +24,45 @@
 
     background-color: $bkg-second-color;
   }
+
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-right: 22px;
+  padding-bottom: 29px;
+  padding-left: 18px;
 }
 
 .upload-form__button {
-  margin-bottom: 12px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-top: 24px;
     margin-bottom: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 183px;
     margin: 0;
   }
+
+  margin-bottom: 12px;
 }
 
 .upload-form__wrapper {
-  margin-bottom: 42px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin: 0;
   }
+
+  margin-bottom: 42px;
 }
 
 .upload-form__wrapper-range {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-left: 27px;
   }
 }
 
 .upload-form__wrapper-main {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -70,40 +70,40 @@
     min-height: 400px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 410px;
   }
 }
 
 .upload-form__wrapper-submits {
-  padding-top: 38px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 260px;
     padding: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     width: auto;
   }
+
+  padding-top: 38px;
 }
 
 .upload-form__range {
-  padding: 35px 0;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 19px 0 52px;
   }
+
+  padding: 35px 0;
 }
 
 .upload-form__wrapper-controls {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     justify-content: flex-start;
   }
 }

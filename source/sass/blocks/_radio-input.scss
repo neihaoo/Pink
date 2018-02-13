@@ -1,4 +1,8 @@
 .radio-input__label {
+  @include tablet {
+    padding-left: 59px;
+  }
+
   position: relative;
 
   padding-left: 69px;
@@ -7,10 +11,6 @@
   line-height: 30px;
 
   cursor: pointer;
-
-  @media (min-width: $tablet-width) {
-    padding-left: 59px;
-  }
 
   &::before {
     content: "";

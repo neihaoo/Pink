@@ -1,11 +1,11 @@
 .nojs .nav__toggle {
-  @media (max-width: $nav-open-width) {
+  @include nav-open {
     display: none;
   }
 }
 
 .nojs .nav__items {
-  @media (max-width: $nav-open-width) {
+  @include nav-open {
     position: static;
   }
 }

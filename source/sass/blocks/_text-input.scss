@@ -1,22 +1,22 @@
 .text-input {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     align-items: center;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-right: 0;
   }
 
   &--fullname {
-    @media (min-width: $desktop-width) {
+    @include desktop {
       margin-bottom: 48px;
     }
   }
 }
 
 .text-input--contacts {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     position: relative;
 
     flex-direction: column-reverse;
@@ -24,31 +24,31 @@
     margin-bottom: 29px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 0;
   }
 
   &:last-child {
-    @media (min-width: $tablet-width) {
+    @include tablet {
       margin-bottom: 0;
     }
 
     &::after {
-      @media (min-width: $tablet-width) {
+      @include tablet {
         background-image: url("../img/icon-mail.svg");
       }
     }
   }
 
   &::after {
-    @media (min-width: $tablet-width) {
+    @include tablet {
       content: "";
       position: absolute;
-      top: 22px;
-      right: 22px;
+      top: 24px;
+      right: 17px;
 
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
 
       background-image: url("../img/icon-phone.svg");
       background-repeat: no-repeat;
@@ -57,26 +57,32 @@
 }
 
 .text-input--contacts .text-input__label {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-top: 10px;
     margin-left: 20px;
   }
 }
 
 .text-input--contacts .text-input__input {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding-right: 18px;
     padding-left: 18px;
 
     border-right-width: 62px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 375px;
   }
 }
 
 .text-input__label {
+  @include tablet {
+    margin-right: 18px;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
   display: block;
   margin-bottom: 5px;
   margin-left: 22px;
@@ -85,12 +91,6 @@
   line-height: 30px;
   color: $element-color;
   text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    margin-right: 18px;
-    margin-bottom: 0;
-    margin-left: 0;
-  }
 }
 
 .text-input__input {

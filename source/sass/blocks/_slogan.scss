@@ -1,4 +1,8 @@
 .slogan {
+  @include tablet {
+    padding: 20px;
+  }
+
   padding-top: 41px;
   padding-bottom: 36px;
 
@@ -6,17 +10,10 @@
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
-
-  @media (min-width: $tablet-width) {
-    padding: 20px;
-  }
 }
 
 .slogan__text {
-  margin-top: 0;
-  margin-bottom: 31px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin: 0;
 
     font-size: 40px;
@@ -26,13 +23,16 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 50px;
 
     &:last-child {
       padding: 0 150px;
     }
   }
+
+  margin-top: 0;
+  margin-bottom: 31px;
 
   &:last-child {
     margin-bottom: 0;

@@ -3,36 +3,30 @@
 }
 
 .contacts__slogan {
-  width: 280px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 620px;
     margin-top: 26px;
     margin-bottom: 23px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 940px;
     margin-top: 44px;
     margin-bottom: 36px;
     padding-right: 10px;
     padding-left: 10px;
   }
+
+  width: 280px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .contacts__items {
   @include clear-list;
 
-  width: 280px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-bottom: 40px;
-  padding-left: 20px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -40,55 +34,61 @@
     padding-bottom: 29px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 940px;
     padding-right: 10px;
     padding-bottom: 20px;
     padding-left: 10px;
   }
+
+  width: 280px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
 }
 
 .contacts__item {
-  margin-bottom: 23px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 298px;
     margin-bottom: 45px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 298px;
   }
 
-  &:last-child {
-    margin-bottom: 0;
+  margin-bottom: 23px;
 
-    @media (min-width: $tablet-width) {
+  &:last-child {
+    @include tablet {
       margin: 0 auto;
     }
+
+    margin-bottom: 0;
   }
 
   &--order {
-    @media (min-width: $desktop-width) {
+    @include desktop {
       order: 1;
     }
   }
 }
 
 .contacts__subtitle {
+  @include tablet {
+    margin-bottom: 8px;
+  }
+
+  @include desktop {
+    margin-bottom: 25px;
+  }
+
   display: block;
   margin-bottom: 3px;
 
   font-weight: 700;
   font-size: 18px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 8px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 25px;
-  }
 }
 
 .contacts__link {
@@ -114,6 +114,33 @@
 }
 
 .contacts__map {
+  @include retina {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+
+  @include tablet {
+    @include retina {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
+
+    height: 373px;
+
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    background-position: center -349px;
+  }
+
+  @include desktop {
+    @include retina {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+
+    height: 486px;
+    margin-bottom: 7px;
+
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-position: center -293px;
+  }
+
   position: relative;
 
   height: 200px;
@@ -121,36 +148,7 @@
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: bottom center;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-map-mobile@2x.jpg");
-    background-size: 320px auto;
-  }
-
-  @media (min-width: $tablet-width) {
-    height: 373px;
-
-    background-image: url("../img/bg-map-tablet@1x.jpg");
-    background-position: center -349px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-map-tablet@2x.jpg");
-      background-size: 700px auto;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 486px;
-    margin-bottom: 7px;
-
-    background-image: url("../img/bg-map-desktop@1x.jpg");
-    background-position: center -293px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-map-desktop@2x.jpg");
-      background-size: 1200px auto;
-    }
-  }
+  background-size: 100% auto;
 }
 
 .contacts__map-decor {
@@ -164,14 +162,14 @@
 }
 
 .contacts__map-google {
-  width: 100%;
-  min-height: 200px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     min-height: 373px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     min-height: 486px;
   }
+
+  width: 100%;
+  min-height: 200px;
 }

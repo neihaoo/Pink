@@ -1,16 +1,21 @@
 .promo {
-  display: none;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: block;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     background-color: $bkg-second-color;
   }
+
+  display: none;
 }
 
 .promo__title {
+  @include desktop {
+    width: auto;
+    margin-bottom: 21px;
+  }
+
   width: 205px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -19,20 +24,15 @@
   font-size: 30px;
   line-height: 36px;
   color: $caption-color;
-
-  @media (min-width: $desktop-width) {
-    width: auto;
-    margin-bottom: 21px;
-  }
 }
 
 .promo__text {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin: 0;
     margin-bottom: 10px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 30px;
 
     font-size: 18px;
@@ -41,18 +41,16 @@
 }
 
 .promo__link {
-  color: $element-color;
-
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 18px;
     line-height: 30px;
   }
+
+  color: $element-color;
 }
 
 .promo__wrapper {
-  position: relative;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 300px;
     margin: 0 auto;
     padding-top: 96px;
@@ -66,7 +64,7 @@
     background-size: 238px auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 570px;
     padding-top: 123px;
     padding-right: 10px;
@@ -77,8 +75,10 @@
     background-size: 298px auto;
   }
 
+  position: relative;
+
   &::before {
-    @media (min-width: $tablet-width) {
+    @include tablet {
       content: "24";
       position: absolute;
       top: 135px;
@@ -90,7 +90,7 @@
       color: $element-color;
     }
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       top: 127px;
       left: 86px;
 
@@ -100,7 +100,7 @@
   }
 
   &::after {
-    @media (min-width: $tablet-width) {
+    @include tablet {
       content: "";
       position: absolute;
       bottom: 107px;
@@ -113,7 +113,7 @@
       border-radius: 50%;
     }
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       bottom: 90px;
       left: 29px;
 

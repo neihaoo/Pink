@@ -10,37 +10,48 @@
 }
 
 .price__wrapper {
-  width: 320px;
-  margin: 0 auto;
-  padding: 88px 0 50px;
-  overflow: hidden;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 620px;
     padding: 85px 20px 25px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 940px;
     padding: 142px 10px 52px;
   }
+
+  width: 320px;
+  margin: 0 auto;
+  padding: 88px 0 50px;
+  overflow: hidden;
 }
 
 .price__table {
+  @include tablet {
+    width: 100%;
+
+    transform: none;
+  }
+
   width: 837px;
 
   border-collapse: collapse;
 
   transform: translate(-258px);
-
-  @media (min-width: $tablet-width) {
-    width: 100%;
-
-    transform: none;
-  }
 }
 
 .price__header {
+  @include tablet {
+    width: 25%;
+    padding-top: 12px;
+    padding-bottom: 7px;
+  }
+
+  @include desktop {
+    padding-top: 16px;
+    padding-bottom: 22px;
+  }
+
   position: relative;
 
   width: 33%;
@@ -51,30 +62,29 @@
   background-color: $main-color;
   border: 2px solid $disabled-color;
 
-  @media (min-width: $tablet-width) {
-    width: 25%;
-    padding-top: 12px;
-    padding-bottom: 7px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 16px;
-    padding-bottom: 22px;
-  }
-
   &--hit {
-    background-image: url("../img/bg-hit.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: $tablet-width) {
+    @include tablet {
       background-image: url("../img/bg-hit-tablet.svg");
     }
 
-    @media (min-width: $desktop-width) {
+    @include desktop {
       background-image: url("../img/bg-hit.svg");
     }
 
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+
     &::before {
+      @include tablet {
+        top: 5px;
+        left: 6px;
+      }
+
+      @include desktop {
+        top: 10px;
+        left: 11px;
+      }
+
       content: "Хит";
       position: absolute;
       top: 12px;
@@ -87,27 +97,17 @@
       text-transform: uppercase;
 
       transform: rotate(-45deg);
-
-      @media (min-width: $tablet-width) {
-        top: 5px;
-        left: 6px;
-      }
-
-      @media (min-width: $desktop-width) {
-        top: 10px;
-        left: 11px;
-      }
     }
   }
 
   &--hidden {
-    display: none;
-
-    @media (min-width: $tablet-width) {
+    @include tablet {
       display: table-cell;
 
       visibility: hidden;
     }
+
+    display: none;
   }
 }
 
@@ -118,88 +118,88 @@
 }
 
 .price__title {
-  margin-top: 0;
-  margin-bottom: 2px;
-
-  font-weight: 700;
-  font-size: 18px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 0;
 
     font-size: 16px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 18px;
   }
+
+  margin-top: 0;
+  margin-bottom: 2px;
+
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .price__coast {
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    font-size: 24px;
+  }
+
   margin: 0;
 
   font-weight: 300;
   font-size: 24px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 18px;
-  }
-
-  @media (min-width: $desktop-width) {
-    font-size: 24px;
-  }
 }
 
 .price__field {
-  padding: 20px;
-
-  background-color: $bkg-main-color;
-  border: 2px solid $disabled-color;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 4px 14px;
 
     font-size: 14px;
     text-transform: none;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding: 14px 20px;
 
     font-size: 18px;
   }
 
-  &--hidden {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: table-cell;
-    }
-  }
-}
-
-.price__value {
-  padding: 13px 21px;
+  padding: 20px;
 
   background-color: $bkg-main-color;
   border: 2px solid $disabled-color;
 
-  @media (min-width: $tablet-width) {
-    padding-top: 6px;
-    padding-bottom: 6px;
+  &--hidden {
+    @include tablet {
+      display: table-cell;
+    }
+
+    display: none;
   }
 }
 
-.price__value-icon {
-  float: right;
-  width: 24px;
-  height: 32px;
+.price__value {
+  @include tablet {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 
-  @media (min-width: $tablet-width) {
+  padding: 13px 21px;
+
+  background-color: $bkg-main-color;
+  border: 2px solid $disabled-color;
+}
+
+.price__value-icon {
+  @include tablet {
     display: block;
     float: none;
     margin: 0 auto;
   }
+
+  float: right;
+  width: 24px;
+  height: 32px;
 
   &--cross {
     fill: $false-color;
@@ -211,13 +211,13 @@
 }
 
 .price__slider-item {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: none;
   }
 }
 
 .price__slider .slider__toggles {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: none;
   }
 }

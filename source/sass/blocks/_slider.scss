@@ -1,5 +1,5 @@
 .slider {
-  @media (min-width: $desktop-width) {
+  @include desktop {
     position: relative;
   }
 }
@@ -9,15 +9,15 @@
 }
 
 .slider__toggles {
+  @include desktop {
+    display: none;
+  }
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 56px;
   margin: 0 auto;
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
 }
 
 .slider__toggle {
@@ -50,6 +50,10 @@
 
 .slider__toggle-next,
 .slider__toggle-prev {
+  @include desktop {
+    display: block;
+  }
+
   position: absolute;
   top: 145px;
 
@@ -61,10 +65,6 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-
-  @media (min-width: $desktop-width) {
-    display: block;
-  }
 
   &::before {
     content: "";

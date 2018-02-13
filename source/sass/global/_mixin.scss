@@ -4,3 +4,27 @@
 
   list-style: none;
 }
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin nav-open {
+  @media (max-width: $nav-open-width) {
+    @content;
+  }
+}

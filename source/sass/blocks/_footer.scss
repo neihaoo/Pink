@@ -1,21 +1,15 @@
 .footer {
   &--index {
-    display: none;
-
-    @media (min-width: $tablet-width) {
+    @include tablet {
       display: block;
     }
+
+    display: none;
   }
 }
 
 .footer__wrapper {
-  width: 280px;
-  margin: 0 auto;
-  padding: 40px 20px;
-
-  text-align: center;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     justify-content: space-between;
     width: 620px;
@@ -24,7 +18,7 @@
     padding-bottom: 38px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 940px;
     margin-top: 0;
     padding-top: 63px;
@@ -32,38 +26,44 @@
     padding-bottom: 73px;
     padding-left: 10px;
   }
+
+  width: 280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  text-align: center;
 }
 
 .footer__logo {
-  display: block;
-  margin-bottom: 34px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin: 0;
   }
+
+  display: block;
+  margin-bottom: 34px;
 }
 
 .footer__logo-image {
+  @include desktop {
+    display: none;
+  }
+
   width: 147px;
   height: 41px;
 
   fill: $bkg-main-color;
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
 }
 
 .footer__logo-desktop {
+  @include desktop {
+    display: block;
+  }
+
   display: none;
   width: 147px;
   height: 41px;
 
   fill: $bkg-main-color;
-
-  @media (min-width: $desktop-width) {
-    display: block;
-  }
 }
 
 .footer__logo-text {
@@ -88,22 +88,22 @@
 }
 
 .footer__social {
-  margin-bottom: 40px;
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-top: 5px;
     margin-right: 19px;
     margin-bottom: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-right: 0;
     margin-left: 6px;
   }
+
+  margin-bottom: 40px;
 }
 
 .footer__copyright {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-top: 15px;
   }
 }

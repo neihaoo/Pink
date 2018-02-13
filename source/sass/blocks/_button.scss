@@ -25,21 +25,21 @@
   }
 
   &--index {
-    @media (min-width: $desktop-width) {
+    @include desktop {
       font-size: 21px;
     }
   }
 
   &--colored {
+    @include desktop {
+      font-size: 18px;
+    }
+
     width: 100%;
 
     color: $element-color;
 
     border-color: $element-color;
-
-    @media (min-width: $desktop-width) {
-      font-size: 18px;
-    }
 
     &:hover {
       color: $bkg-main-color;
@@ -75,6 +75,10 @@
   }
 
   &--square {
+    @include tablet {
+      width: 300px;
+    }
+
     width: 100%;
     padding-top: 13px;
     padding-bottom: 14px;
@@ -85,10 +89,6 @@
     background-color: $btn-square-color;
     border-color: $btn-square-color;
     border-radius: 2px;
-
-    @media (min-width: $tablet-width) {
-      width: 300px;
-    }
 
     &:hover {
       color: $bkg-main-color;
