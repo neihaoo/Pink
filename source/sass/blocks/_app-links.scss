@@ -27,6 +27,11 @@
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
 
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-mobile@2x.png");
+      background-size: 258px auto;
+    }
+
     @media (min-width: $tablet-width) {
       display: none;
     }

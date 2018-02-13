@@ -32,6 +32,12 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
     }
+
+    &::after {
+      @media (min-width: $tablet-width) {
+        background-image: url("../img/icon-mail.svg");
+      }
+    }
   }
 
   &::after {
@@ -44,7 +50,7 @@
       width: 20px;
       height: 20px;
 
-      background-image: url("http://placehold.it/20x20");
+      background-image: url("../img/icon-phone.svg");
       background-repeat: no-repeat;
     }
   }

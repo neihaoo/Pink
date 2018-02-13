@@ -158,25 +158,54 @@
   }
 }
 
+.nav__logo:hover .nav__logo-image,
+.nav__logo:hover .nav__logo-tablet,
+.nav__logo:hover .nav__logo-desktop {
+  fill: $element-color;
+}
+
+.nav__logo:active .nav__logo-image,
+.nav__logo:active .nav__logo-tablet,
+.nav__logo:active .nav__logo-desktop {
+  fill: transparentize($bkg-main-color, 0.7);
+}
+
 .nav__logo-image {
   width: 75px;
   height: 23px;
+
+  fill: $bkg-main-color;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-
 .nav__logo-tablet {
   display: none;
   width: 147px;
   height: 41px;
 
+  fill: $bkg-main-color;
+
   @media (min-width: $tablet-width) {
     display: block;
+  }
 
-    fill: $bkg-main-color;
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.nav__logo-desktop {
+  display: none;
+  width: 147px;
+  height: 41px;
+
+  fill: $bkg-main-color;
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 

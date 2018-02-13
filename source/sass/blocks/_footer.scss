@@ -41,19 +41,50 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+}
 
-  &:active {
-    opacity: 0.3;
+.footer__logo-image {
+  width: 147px;
+  height: 41px;
+
+  fill: $bkg-main-color;
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
-.footer__logo:hover .footer__logo-text {
+.footer__logo-desktop {
+  display: none;
+  width: 147px;
+  height: 41px;
+
+  fill: $bkg-main-color;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.footer__logo-text {
+  fill: $main-color;
+}
+
+.footer__logo-glass {
   fill: $element-color;
 }
 
+.footer__logo:hover .footer__logo-text,
+.footer__logo:hover .footer__logo-glass {
+  fill: $element-color;
+}
 
 .footer__logo:active .footer__logo-text {
-  fill: $main-color;
+  fill: transparentize($main-color, 0.7);
+}
+
+.footer__logo:active .footer__logo-glass {
+  fill: transparentize($element-color, 0.7);
 }
 
 .footer__social {

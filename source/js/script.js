@@ -6,12 +6,12 @@ navJs.classList.remove('nojs');
 navJs.classList.replace('nav--opened', 'nav--closed');
 
 navToggle.addEventListener('click', function() {
-  if (nav.classList.contains('nav--closed')) {
-    nav.classList.remove('nav--closed');
-    nav.classList.add('nav--opened');
+  if (navJs.classList.contains('nav--closed')) {
+    navJs.classList.remove('nav--closed');
+    navJs.classList.add('nav--opened');
   } else {
-    nav.classList.add('nav--closed');
-    nav.classList.remove('nav--opened');
+    navJs.classList.add('nav--closed');
+    navJs.classList.remove('nav--opened');
   }
 });
 

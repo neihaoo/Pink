@@ -41,6 +41,11 @@
   background-repeat: no-repeat;
   background-position: center 504px;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+    background-size: 157px auto;
+  }
+
   @media (min-width: $tablet-width) {
     width: 310px;
     padding-top: 73px;
@@ -49,8 +54,13 @@
 
     text-align: left;
 
-    background-image: url("http://placehold.it/268x485");
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
     background-position: 20px bottom;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      background-size: 268px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -102,8 +112,29 @@
     width: 240px;
     padding-top: 356px;
 
-    background-image: url("http://placehold.it/186x300");
+    background-image: url("../img/iphone-screen-1-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: -23px -3px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      background-size: 292px auto;
+    }
+
+    &--color {
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      }
+    }
+
+    &--smile {
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      }
+    }
   }
 }

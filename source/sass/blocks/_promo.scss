@@ -50,6 +50,8 @@
 }
 
 .promo__wrapper {
+  position: relative;
+
   @media (min-width: $tablet-width) {
     width: 300px;
     margin: 0 auto;
@@ -58,9 +60,10 @@
     padding-bottom: 115px;
     padding-left: 319px;
 
-    background-image: url("http://placehold.it/238x276");
+    background-image: url("../img/icon-timer.svg");
     background-repeat: no-repeat;
     background-position: 11px 59px;
+    background-size: 238px auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -70,7 +73,54 @@
     padding-bottom: 113px;
     padding-left: 373px;
 
-    background-image: url("http://placehold.it/298x345");
     background-position: 8px 32px;
+    background-size: 298px auto;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "24";
+      position: absolute;
+      top: 135px;
+      left: 74px;
+
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 149.47px;
+      color: $element-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 127px;
+      left: 86px;
+
+      font-size: 120px;
+      line-height: 186.84px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: 107px;
+      left: 29px;
+
+      width: 172px;
+      height: 172px;
+
+      border: 15px solid $element-color;
+      border-radius: 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: 90px;
+      left: 29px;
+
+      width: 219px;
+      height: 219px;
+
+      border: 17px solid $element-color;
+    }
   }
 }

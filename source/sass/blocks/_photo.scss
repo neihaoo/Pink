@@ -92,6 +92,16 @@
 
   &--best {
     width: 100%;
+
+    @media (min-width: $tablet-width) {
+      min-height: 509px;
+      object-fit: cover;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 506px;
+      object-fit: cover;
+    }
   }
 }
 

@@ -11,19 +11,38 @@
   background-position: top center;
   background-size: cover;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: auto 462px;
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 439px;
     margin-top: -110px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 395px;
+
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 2560px auto;
+    }
   }
 
   &--index {
     padding-top: 462px;
 
-    background-size: contain;
+    background-size: auto 462px;
 
     @media (min-width: $tablet-width) {
       min-height: 410px;
@@ -96,9 +115,14 @@
     padding-bottom: 110px;
 
     background-color: transparent;
-    background-image: url("http://placehold.it/475x550");
+    background-image: url("../img/iphone-hand-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+      background-size: 700px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -106,6 +130,12 @@
     margin: 0 auto;
     padding-bottom: 122px;
 
-    background-image: url("http://placehold.it/600x650");
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: 16px bottom;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+      background-size: 1050px auto;
+    }
   }
 }

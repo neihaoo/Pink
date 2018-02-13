@@ -116,23 +116,40 @@
 .contacts__map {
   position: relative;
 
-  min-height: 200px;
+  height: 200px;
 
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 
   @media (min-width: $tablet-width) {
-    min-height: 373px;
+    height: 373px;
 
-    background-image: url("http://placehold.it/660x373");
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    background-position: center -349px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+      background-size: 700px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 486;
+    height: 486px;
+    margin-bottom: 7px;
 
-    background-image: url("http://placehold.it/960x486");
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-position: center -293px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
 
