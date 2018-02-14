@@ -68,7 +68,6 @@ gulp.task("html", function() {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
     "source/js/**"
   ], {
     base: "source"
@@ -98,6 +97,8 @@ gulp.task("build", function (done) {
     "clean",
     "copy",
     "style",
+    "images",
+    "webp",
     "sprite",
     "html",
     done
