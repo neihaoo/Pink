@@ -158,19 +158,19 @@
   border-bottom: 1px solid $caption-color;
 }
 
-.nav__logo:hover .nav__logo-image,
+.nav__logo:hover .nav__logo-mobile,
 .nav__logo:hover .nav__logo-tablet,
 .nav__logo:hover .nav__logo-desktop {
   fill: $element-color;
 }
 
-.nav__logo:active .nav__logo-image,
+.nav__logo:active .nav__logo-mobile,
 .nav__logo:active .nav__logo-tablet,
 .nav__logo:active .nav__logo-desktop {
   fill: transparentize($bkg-main-color, 0.7);
 }
 
-.nav__logo-image {
+.nav__logo-mobile {
   @include tablet {
     display: none;
   }

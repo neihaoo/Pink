@@ -147,8 +147,7 @@
 
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: 100% auto;
+  background-position: center -446px;
 }
 
 .contacts__map-decor {
@@ -159,6 +158,8 @@
   display: block;
   width: 100%;
   height: auto;
+
+  fill: $bkg-main-color;
 }
 
 .contacts__map-google {

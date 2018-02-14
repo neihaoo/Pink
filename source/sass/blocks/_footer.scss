@@ -43,7 +43,7 @@
   margin-bottom: 34px;
 }
 
-.footer__logo-image {
+.footer__logo-mobile {
   @include desktop {
     display: none;
   }
@@ -51,7 +51,7 @@
   width: 147px;
   height: 41px;
 
-  fill: $bkg-main-color;
+  fill: $main-color;
 }
 
 .footer__logo-desktop {
@@ -63,28 +63,20 @@
   width: 147px;
   height: 41px;
 
-  fill: $bkg-main-color;
-}
-
-.footer__logo-text {
   fill: $main-color;
 }
 
-.footer__logo-glass {
+.footer__logo:hover .footer__logo-mobile,
+.footer__logo:hover .footer__logo-desktop {
   fill: $element-color;
 }
 
-.footer__logo:hover .footer__logo-text,
-.footer__logo:hover .footer__logo-glass {
-  fill: $element-color;
-}
 
-.footer__logo:active .footer__logo-text {
-  fill: transparentize($main-color, 0.7);
-}
+.footer__logo:active .footer__logo-mobile,
+.footer__logo:active .footer__logo-desktop {
+  opacity: 0.3;
 
-.footer__logo:active .footer__logo-glass {
-  fill: transparentize($element-color, 0.7);
+  fill: $main-color;
 }
 
 .footer__social {
@@ -96,7 +88,7 @@
 
   @include desktop {
     margin-right: 0;
-    margin-left: 6px;
+    margin-left: 15px;
   }
 
   margin-bottom: 40px;

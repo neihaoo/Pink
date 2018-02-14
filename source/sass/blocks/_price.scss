@@ -17,7 +17,7 @@
 
   @include desktop {
     width: 940px;
-    padding: 142px 10px 52px;
+    padding: 143px 10px 52px;
   }
 
   width: 320px;
@@ -181,10 +181,10 @@
 .price__value {
   @include tablet {
     padding-top: 6px;
-    padding-bottom: 6px;
+    padding-bottom: 11px;
   }
 
-  padding: 13px 21px;
+  padding: 14px 21px;
 
   background-color: $bkg-main-color;
   border: 2px solid $disabled-color;
@@ -198,8 +198,8 @@
   }
 
   float: right;
-  width: 24px;
-  height: 32px;
+  width: 27px;
+  height: 27px;
 
   &--cross {
     fill: $false-color;
