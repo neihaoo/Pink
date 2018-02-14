@@ -13,7 +13,7 @@
   @include desktop {
     width: 920px;
     margin-top: 47px;
-    margin-bottom: 57px;
+    margin-bottom: 54px;
     padding: 0 10px;
   }
 
@@ -113,11 +113,11 @@
     }
 
     width: 240px;
-    padding-top: 356px;
+    padding-top: 359px;
 
     background-image: url("../img/iphone-screen-1-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: -23px -3px;
+    background-position: -23px 1px;
 
     &--color {
       @include retina {
