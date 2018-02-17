@@ -27,6 +27,7 @@
   }
 
   @include desktop {
+    justify-content: flex-start;
     width: 940px;
     margin-bottom: 5px;
     padding-right: 10px;
@@ -40,10 +41,17 @@
 
 .photos__item {
   @include desktop {
+    margin-right: 20px;
     margin-bottom: 54px;
   }
 
   margin-bottom: 20px;
+
+  &:nth-child(3n) {
+    @include desktop {
+      margin-right: 0;
+    }
+  }
 }
 
 .photos__item-wrapper {

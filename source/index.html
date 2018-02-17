@@ -17,7 +17,7 @@
     <nav class="nav nav--opened nojs">
       <div class="nav__wrapper-main">
         <div class="nav__wrapper-inner">
-          <a class="nav__logo" href="#">
+          <a class="nav__logo">
             <span class="visually-hidden">Приложение Pink</span>
             <svg class="nav__logo-mobile" width="74.426" height="22.859">
               <use xlink:href="#logo-pink-white-mobile"></use>
@@ -35,7 +35,7 @@
         </div>
         <ul class="nav__items">
           <li class="nav__item">
-            <a class="nav__link" href="#">Главная</a>
+            <a class="nav__link">Главная</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="photo.html">Фотографии</a>
@@ -59,13 +59,13 @@
           <a class="app-links__button button button--index" href="https://itunes.apple.com">Скачать приложение</a>
           <div class="app-links__wrapper">
             <a class="app-links__link" href="https://itunes.apple.com">
-              <img src="img/logo-apple.svg" width="47" height="57" alt="Apple">
+              <img src="img/logo-apple.svg" width="47" height="57" alt="Скачать приложение для iOS">
             </a>
             <a class="app-links__link" href="https://play.google.com">
-              <img src="img/logo-android.svg" width="43" height="47" alt="Android">
+              <img src="img/logo-android.svg" width="43" height="48" alt="Скачать приложение для Android">
             </a>
             <a class="app-links__link" href="https://www.microsoft.com/store">
-              <img src="img/logo-microsoft.svg" width="44" height="42" alt="Windows Phone">
+              <img src="img/logo-microsoft.svg" width="44" height="42" alt="Скачать приложение для Windows Phone">
             </a>
           </div>
           <p class="app-links__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -104,41 +104,39 @@
     </section>
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы</h2>
-      <div class="reviews__wrapper">
-        <div class="reviews__slider  slider">
-          <blockquote class="reviews__item  review review--active">
-            <cite class="review__author">Николай Петров</cite>
-            <span class="review__author-info">25 лет, водитель трамвая</span>
-            <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
-          <blockquote class="reviews__item  review">
-            <cite class="review__author">Николай Петров</cite>
-            <span class="review__author-info">25 лет, водитель трамвая</span>
-            <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
-          <blockquote class="reviews__item  review">
-            <cite class="review__author">Николай Петров</cite>
-            <span class="review__author-info">25 лет, водитель трамвая</span>
-            <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
-          <button class="slider__toggle-prev" type="button">
-            <span class="visually-hidden">Предыдущий отзыв</span>
+      <div class="reviews__slider  slider">
+        <blockquote class="reviews__item  review review--active">
+          <cite class="review__author">Николай Петров</cite>
+          <span class="review__author-info">25 лет, водитель трамвая</span>
+          <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </blockquote>
+        <blockquote class="reviews__item  review">
+          <cite class="review__author">Николай Петров</cite>
+          <span class="review__author-info">25 лет, водитель трамвая</span>
+          <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </blockquote>
+        <blockquote class="reviews__item  review">
+          <cite class="review__author">Николай Петров</cite>
+          <span class="review__author-info">25 лет, водитель трамвая</span>
+          <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </blockquote>
+        <button class="slider__toggle-prev" type="button">
+          <span class="visually-hidden">Предыдущий отзыв</span>
+        </button>
+        <button class="slider__toggle-next" type="button">
+          <span class="visually-hidden">Следующий отзыв</span>
+        </button>
+        <p class="slider__toggles">
+          <button class="slider__toggle slider__toggle--active" type="button">
+            <span class="visually-hidden">Отзыв №1</span>
           </button>
-          <button class="slider__toggle-next" type="button">
-            <span class="visually-hidden">Следующий отзыв</span>
+          <button class="slider__toggle" type="button">
+            <span class="visually-hidden">Отзыв №2</span>
           </button>
-          <p class="slider__toggles">
-            <button class="slider__toggle slider__toggle--active" type="button">
-              <span class="visually-hidden">Отзыв №1</span>
-            </button>
-            <button class="slider__toggle" type="button">
-              <span class="visually-hidden">Отзыв №2</span>
-            </button>
-            <button class="slider__toggle" type="button">
-              <span class="visually-hidden">Отзыв №3</span>
-            </button>
-          </p>
-        </div>
+          <button class="slider__toggle" type="button">
+            <span class="visually-hidden">Отзыв №3</span>
+          </button>
+        </p>
       </div>
     </section>
     <section class="price">
@@ -151,16 +149,22 @@
                 <tr>
                   <th class="price__header price__header--hidden"></th>
                   <th class="price__header">
-                    <p class="price__title">База</p>
-                    <p class="price__coast">1,99 USD</p>
+                    <div class="price__wrapper-header">
+                      <p class="price__title">База</p>
+                      <p class="price__coast">1,99 USD</p>
+                    </div>
                   </th>
                   <th class="price__header price__header--hit">
-                    <p class="price__title">Стандарт</p>
-                    <p class="price__coast">3,99 USD</p>
+                    <div class="price__wrapper-header">
+                      <p class="price__title">Стандарт</p>
+                      <p class="price__coast">3,99 USD</p>
+                    </div>
                   </th>
                   <th class="price__header">
-                    <p class="price__title">Анлим</p>
-                    <p class="price__coast">9,99 USD</p>
+                    <div class="price__wrapper-header">
+                      <p class="price__title">Анлим</p>
+                      <p class="price__coast">9,99 USD</p>
+                    </div>
                   </th>
                 </tr>
               </thead>
@@ -261,9 +265,9 @@
         </ul>
       </div>
       <div class="contacts__map">
-        <svg class="contacts__map-decor" width="595.28" height="61.905">
+        <!-- <svg class="contacts__map-decor" width="595.28" height="61.905">
           <use xlink:href="#bg-triangle-white-footer"></use>
-        </svg>
+        </svg> -->
         <picture class="visually-hidden">
           <source type="image/webp" media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
@@ -321,12 +325,13 @@
             <svg class="copyright__image" width="26.943" height="34.09">
               <use xlink:href="#logo-htmlacademy"></use>
             </svg>
+            <span class="visually-hidden">HTML Academy</span>
           </a>
         </p>
       </div>
     </div>
   </footer>
-  <script async defer src="js/script.js"></script>
+  <script async defer src="js/script.min.js"></script>
   <script async defer src="js/picturefill.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsSwO95vU2cD1QXJixqHcH2RSK7hbFp_w&callback=initMap"></script>
 </body>

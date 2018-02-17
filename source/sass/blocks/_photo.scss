@@ -1,5 +1,7 @@
 .photo {
   @include tablet {
+    display: flex;
+    flex-direction: column;
     width: 300px;
   }
 }
@@ -49,10 +51,6 @@
     align-items: flex-start;
     min-height: auto;
     padding: 24px 28px 12px;
-    padding-top: 24px;
-    padding-right: 28px;
-    padding-bottom: 12px;
-    padding-left: 28px;
   }
 
   @include desktop {
@@ -89,6 +87,8 @@
 }
 
 .photo__image {
+  @include img-fix;
+
   display: block;
 
   &--best {
@@ -108,6 +108,7 @@
 .photo__caption {
   @include tablet {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     min-height: 110px;
     padding: 24px 27px 21px;
@@ -132,7 +133,7 @@
 
 .photo__text {
   @include tablet {
-    margin-bottom: 0;
+    margin-bottom: 13px;
   }
 
   margin-top: 0;

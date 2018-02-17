@@ -1,11 +1,16 @@
 .social__items {
   @include clear-list;
 
+  @include tablet {
+    width: 190px;
+    margin: 0;
+  }
+
   display: flex;
   flex-shrink: 0;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 176px;
+  justify-content: flex-start;
+  width: 178px;
   margin: 0 auto;
 }
 
@@ -25,6 +30,15 @@
 
   &:active {
     opacity: 0.1;
+  }
+}
+
+.social__item {
+  margin-right: 12px;
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 

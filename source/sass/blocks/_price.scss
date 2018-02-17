@@ -22,7 +22,7 @@
 
   width: 320px;
   margin: 0 auto;
-  padding: 88px 0 50px;
+  padding: 88px 0 6px;
   overflow: hidden;
 }
 
@@ -43,78 +43,25 @@
 .price__header {
   @include tablet {
     width: 25%;
-    padding-top: 12px;
-    padding-bottom: 7px;
   }
-
-  @include desktop {
-    padding-top: 16px;
-    padding-bottom: 22px;
-  }
-
-  position: relative;
 
   width: 33%;
-  padding: 16px 20px 20px;
 
   color: $bkg-main-color;
 
   background-color: $main-color;
   border: 2px solid $disabled-color;
 
-  &--hit {
-    @include tablet {
-      background-image: url("../img/bg-hit-tablet.svg");
-    }
-
-    @include desktop {
-      background-image: url("../img/bg-hit.svg");
-    }
-
-    background-image: url("../img/bg-hit.svg");
-    background-repeat: no-repeat;
-
-    &::before {
-      @include tablet {
-        top: 5px;
-        left: 6px;
-      }
-
-      @include desktop {
-        top: 10px;
-        left: 11px;
-      }
-
-      content: "Хит";
-      position: absolute;
-      top: 12px;
-      left: 9px;
-      z-index: 1;
-
-      font-weight: 400;
-      line-height: 30px;
-      color: white;
-      text-transform: uppercase;
-
-      transform: rotate(-45deg);
-    }
-  }
-
   &--hidden {
     @include tablet {
       display: table-cell;
 
+      border: none;
       visibility: hidden;
     }
 
     display: none;
   }
-}
-
-.price__hit {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .price__title {
@@ -184,6 +131,10 @@
     padding-bottom: 11px;
   }
 
+  @include desktop {
+    padding-top: 11px;
+  }
+
   padding: 14px 21px;
 
   background-color: $bkg-main-color;
@@ -210,6 +161,10 @@
   }
 }
 
+.price__slider {
+  margin-bottom: 44px;
+}
+
 .price__slider-item {
   @include tablet {
     display: none;
@@ -219,5 +174,67 @@
 .price__slider .slider__toggles {
   @include tablet {
     display: none;
+  }
+}
+
+.price__wrapper-header {
+  @include tablet {
+    padding-top: 12px;
+    padding-bottom: 5px;
+  }
+
+  @include desktop {
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+
+  position: relative;
+
+  padding: 16px 20px 18px;
+}
+
+.price__header--hit .price__wrapper-header {
+  &::after {
+    @include tablet {
+      @media (max-width: $desktop-width - 1px) {
+        background-image: url("../img/bg-hit-tablet.svg");
+      }
+    }
+
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    @include tablet {
+      top: 5px;
+      left: 6px;
+    }
+
+    @include desktop {
+      top: 10px;
+      left: 11px;
+    }
+
+    content: "Хит";
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    z-index: 1;
+
+    font-weight: 400;
+    line-height: 30px;
+    color: white;
+    text-transform: uppercase;
+
+    transform: rotate(-45deg);
   }
 }

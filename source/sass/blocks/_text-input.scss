@@ -13,6 +13,22 @@
       margin-bottom: 48px;
     }
   }
+
+  &--phone {
+    &::after {
+      @include tablet {
+        background-image: url("../img/icon-phone.svg");
+      }
+    }
+  }
+
+  &--email {
+    &::after {
+      @include tablet {
+        background-image: url("../img/icon-mail.svg");
+      }
+    }
+  }
 }
 
 .text-input--contacts {
@@ -25,7 +41,7 @@
   }
 
   @include desktop {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   &:last-child {
@@ -33,10 +49,8 @@
       margin-bottom: 0;
     }
 
-    &::after {
-      @include tablet {
-        background-image: url("../img/icon-mail.svg");
-      }
+    @include desktop {
+      margin-bottom: 10px;
     }
   }
 
@@ -44,14 +58,15 @@
     @include tablet {
       content: "";
       position: absolute;
-      top: 24px;
-      right: 17px;
+      top: 2px;
+      right: 2px;
 
-      width: 24px;
-      height: 24px;
+      width: 60px;
+      height: 59px;
 
-      background-image: url("../img/icon-phone.svg");
+      background-color: $disabled-color;
       background-repeat: no-repeat;
+      background-position: 50%;
     }
   }
 }
@@ -67,8 +82,6 @@
   @include tablet {
     padding-right: 18px;
     padding-left: 18px;
-
-    border-right-width: 62px;
   }
 
   @include desktop {
@@ -96,6 +109,7 @@
 .text-input__input {
   box-sizing: border-box;
   width: 100%;
+  min-height: 63px;
   padding: 14px 20px 15px;
 
   font-weight: 400;

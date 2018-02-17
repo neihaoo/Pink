@@ -13,7 +13,7 @@
   @include desktop {
     width: 920px;
     margin-top: 47px;
-    margin-bottom: 54px;
+    margin-bottom: 55px;
     padding: 0 10px;
   }
 
@@ -31,15 +31,10 @@
 }
 
 .about__items {
-  @include retina {
-    background-image: url("../img/iphone-screen-mobile@2x.png");
-    background-size: 157px auto;
-  }
-
   @include tablet {
     @include retina {
       background-image: url("../img/iphone-screen-3-tablet@2x.png");
-      background-size: 268px auto;
+      background-repeat: no-repeat;
     }
 
     width: 310px;
@@ -50,20 +45,25 @@
     text-align: left;
 
     background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    background-repeat: no-repeat;
     background-position: 20px bottom;
+    background-size: 268px auto;
   }
 
   @include desktop {
     display: flex;
-    justify-content: space-between;
-    width: 880px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 940px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 10px;
 
     text-align: center;
 
     background-image: none;
   }
+
+  position: relative;
 
   width: 280px;
   margin: 0 auto;
@@ -71,14 +71,31 @@
 
   list-style: none;
 
-  background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: center 504px;
+  &::after {
+    @media (max-width: $tablet-width - 1px) {
+      @include retina {
+        background-image: url("../img/iphone-screen-mobile@2x.png");
+        background-size: 157px auto;
+      }
+
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 83px;
+
+      width: 157px;
+      height: 278px;
+
+      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .about__title {
   @include desktop {
-    margin-bottom: 24px;
+    width: 240px;
+    margin: 0 auto 24px;
 
     font-size: 30px;
     line-height: 30px;
@@ -94,6 +111,9 @@
 
 .about__text {
   @include desktop {
+    width: 240px;
+    margin: 0 auto;
+
     font-size: 18px;
     line-height: 30px;
   }
@@ -112,12 +132,17 @@
       background-size: 292px auto;
     }
 
-    width: 240px;
-    padding-top: 359px;
+    width: 300px;
+    margin-right: 20px;
+    padding-top: 358px;
 
     background-image: url("../img/iphone-screen-1-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: -23px 1px;
+    background-position: top center;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
 
     &--color {
       @include retina {

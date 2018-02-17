@@ -5,6 +5,11 @@
   list-style: none;
 }
 
+@mixin img-fix {
+  width: 100%;
+  height: auto;
+}
+
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;

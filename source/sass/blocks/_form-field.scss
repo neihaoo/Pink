@@ -3,17 +3,22 @@
 
   &--bordered {
     @include tablet {
-      padding-top: 9px;
-      padding-right: 58px;
-      padding-bottom: 13px;
-      padding-left: 58px;
+      position: relative;
+
+      padding: 45px 58px 14px;
 
       border: 2px solid $disabled-color;
+    }
+
+    @include desktop {
+      padding-top: 42px;
+      padding-bottom: 3px;
     }
   }
 
   &--checkbox {
     @include tablet {
+      padding-top: 56px;
       padding-bottom: 1px;
     }
 
@@ -23,11 +28,22 @@
   }
 
   &--radio {
+    @include tablet {
+      padding-top: 56px;
+    }
+
     @include desktop {
-      padding-top: 11px;
-      padding-right: 20px;
-      padding-bottom: 16px;
-      padding-left: 20px;
+      padding: 59px 20px 16px;
+    }
+  }
+
+  &--comments {
+    @include tablet {
+      padding-bottom: 13px;
+    }
+
+    @include desktop {
+      padding-bottom: 3px;
     }
   }
 }
@@ -52,7 +68,7 @@
   }
 
   @include desktop {
-    margin-bottom: 23px;
+    margin-bottom: 33px;
   }
 
   margin-bottom: 17px;
@@ -94,6 +110,7 @@
 
   @include desktop {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 0;
   }
@@ -101,11 +118,18 @@
 
 .form-field__title {
   @include tablet {
-    margin-bottom: 40px;
-  }
+    position: absolute;
+    top: -10px;
+    left: 50%;
 
-  @include desktop {
-    margin-bottom: 25px;
+    max-width: 95%;
+    margin: 0;
+    padding: 0 25px;
+
+    white-space: nowrap;
+
+    background-color: $bkg-main-color;
+    transform: translateX(-50%);
   }
 
   margin-bottom: 39px;
@@ -119,38 +143,17 @@
   &--hidden {
     @include tablet {
       display: block;
-      margin-bottom: 28px;
       padding-right: 30px;
       padding-left: 30px;
-    }
-
-    @include desktop {
-      margin-bottom: 25px;
     }
 
     display: none;
   }
 }
 
-.form-field--radio .form-field__title {
-  @include tablet {
-    margin-bottom: 40px;
-  }
-}
-
-.form-field--checkbox .form-field__title {
-  @include desktop {
-    margin-bottom: 39px;
-  }
-}
-
 .form-field--comments .form-field__title {
   @include tablet {
-    margin-bottom: 28px;
-  }
-
-  @include desktop {
-    margin-bottom: 25px;
+    margin: 0;
   }
 
   margin-bottom: 16px;

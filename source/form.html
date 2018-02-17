@@ -17,7 +17,7 @@
     <nav class="nav nav--opened nojs">
       <div class="nav__wrapper-main">
         <div class="nav__wrapper-inner">
-          <a class="nav__logo" href="index.html">
+          <a class="nav__logo nav__logo--index" href="index.html">
             <span class="visually-hidden">Приложение Pink</span>
             <svg class="nav__logo-mobile" width="74.426" height="22.859">
               <use xlink:href="#logo-pink-white-mobile"></use>
@@ -41,7 +41,7 @@
             <a class="nav__link" href="photo.html">Фотографии</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link nav__link--active" href="#">Конкурс</a>
+            <a class="nav__link nav__link--active">Конкурс</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
@@ -77,7 +77,7 @@
           </fieldset>
         </div>
         <div class="contest__wrapper-trip">
-          <fieldset class="contest__field form-field form-field--checkbox form-field--bordered">
+          <fieldset class="contest__field form-field form-field--bordered form-field--checkbox">
             <legend class="form-field__title">Ваши безбашенные достижения в путешествии</legend>
             <div class="form-field__wrapper-main">
               <div class="form-field__wrapper-inner">
@@ -117,11 +117,11 @@
           <fieldset class="contest__field form-field form-field--bordered">
             <legend class="form-field__title form-field__title--hidden">Контактная информация</legend>
             <div class="form-field__wrapper-contacts">
-              <div class="form-field__item text-input text-input--contacts">
+              <div class="form-field__item text-input text-input--contacts text-input--phone">
                 <label class="text-input__label" for="telephone">Номер телефона</label>
                 <input class="text-input__input" id="telephone" type="tel" name="telephone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" placeholder="Номер, пожалуйста">
               </div>
-              <div class="form-field__item text-input text-input--contacts">
+              <div class="form-field__item text-input text-input--contacts text-input--email">
                 <label class="text-input__label" for="email">Адрес почты</label>
                 <input class="text-input__input" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Введите почту *" required>
               </div>
@@ -129,7 +129,7 @@
           </fieldset>
         </div>
         <div class="contest__wrapper-app">
-          <fieldset class="contest__field form-field form-field--radio form-field--bordered">
+          <fieldset class="contest__field form-field form-field--bordered form-field--radio">
             <legend class="form-field__title">С каким приложением путешествовали?</legend>
             <div class="form-field__item radio-input">
               <input class="radio-input__input visually-hidden" id="ios" type="radio" name="app-version" value="ios" checked>
@@ -208,6 +208,7 @@
             <svg class="copyright__image" width="26.943" height="34.09">
               <use xlink:href="#logo-htmlacademy"></use>
             </svg>
+            <span class="visually-hidden">HTML Academy</span>
           </a>
         </p>
       </div>
@@ -233,7 +234,7 @@
       </div>
     </section>
   </div>
-  <script async defer src="js/script.js"></script>
+  <script async defer src="js/script.min.js"></script>
   <script async defer src="js/picturefill.min.js"></script>
 </body>
 </html>
