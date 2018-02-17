@@ -14,15 +14,15 @@
   }
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 56px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .slider__toggle {
   width: 6px;
   height: 6px;
+  margin: 0 9.5px;
   padding: 0;
 
   background-color: transparentize($main-color, 0.7);
@@ -55,7 +55,7 @@
   }
 
   position: absolute;
-  top: 145px;
+  top: 50%;
 
   display: none;
   width: 41px;

@@ -23,7 +23,7 @@
       width: 320px;
       height: 1px;
 
-      background-color: rgba(40, 54, 69, 0.1);
+      background-color: transparentize($main-color, 0.9);
     }
   }
 }

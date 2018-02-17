@@ -61,6 +61,7 @@
 
 .hero__title {
   @include tablet {
+    width: 620px;
     padding-top: 180px;
 
     font-weight: 300;
@@ -69,10 +70,12 @@
   }
 
   @include desktop {
+    width: 920px;
     padding-top: 174px;
   }
 
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   padding: 96px 20px 20px;
 
   font-weight: 300;
@@ -80,9 +83,8 @@
   line-height: 1.2;
 
   &--size {
-    @include desktop {
-      width: 658px;
-      margin: 0 auto;
+    @include tablet {
+      width: 620px;
     }
   }
 }
@@ -90,6 +92,7 @@
 .hero--index .hero__title {
   @include tablet {
     display: block;
+    width: 240px;
     margin-bottom: 31px;
     padding: 0 30px;
 

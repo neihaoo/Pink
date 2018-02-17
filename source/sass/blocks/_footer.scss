@@ -15,16 +15,13 @@
     width: 620px;
     margin-top: 6px;
     padding-top: 28px;
-    padding-bottom: 38px;
+    padding-bottom: 26px;
   }
 
   @include desktop {
     width: 940px;
     margin-top: 0;
-    padding-top: 63px;
-    padding-right: 10px;
-    padding-bottom: 73px;
-    padding-left: 10px;
+    padding: 63px 10px 60px;
   }
 
   width: 280px;
@@ -40,7 +37,7 @@
   }
 
   display: block;
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 }
 
 .footer__logo-mobile {
@@ -82,16 +79,16 @@
 .footer__social {
   @include tablet {
     margin-top: 5px;
-    margin-right: 19px;
+    margin-right: 5px;
     margin-bottom: 0;
   }
 
   @include desktop {
     margin-right: 0;
-    margin-left: 15px;
+    margin-left: 19px;
   }
 
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .footer__copyright {

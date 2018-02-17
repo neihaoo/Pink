@@ -7,6 +7,7 @@
 
   @include desktop {
     width: 805px;
+    margin-bottom: 45px;
     padding-right: 10px;
     padding-bottom: 33px;
     padding-left: 10px;
@@ -19,7 +20,7 @@
 
 .contest__wrapper-trip {
   @include tablet {
-    margin-bottom: 57px;
+    margin-bottom: 65px;
     padding-top: 0;
 
     background-color: $bkg-main-color;
@@ -38,7 +39,7 @@
 .contest__wrapper-app {
   @include tablet {
     order: -2;
-    margin-bottom: 57px;
+    margin-bottom: 65px;
     padding-top: 0;
 
     background-color: $bkg-main-color;
@@ -59,12 +60,12 @@
 .contest__wrapper-fullname {
   @include tablet {
     order: -3;
-    margin-bottom: 6px;
+    margin-bottom: 14px;
   }
 
   @include desktop {
     width: 435px;
-    margin-top: 14px;
+    margin-top: 6px;
     margin-bottom: 4px;
   }
 
@@ -75,11 +76,11 @@
   @include tablet {
     order: -1;
     width: 100%;
-    margin-bottom: 57px;
+    margin-bottom: 65px;
   }
 
   @include desktop {
-    margin-top: 53px;
+    margin-top: 61px;
   }
 
   margin-bottom: 25px;
@@ -173,7 +174,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 940px;
-    margin: 0 auto;
     padding: 0 10px;
   }
 }
