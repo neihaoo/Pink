@@ -64,7 +64,9 @@
 }
 
 .footer__logo:hover .footer__logo-mobile,
-.footer__logo:hover .footer__logo-desktop {
+.footer__logo:hover .footer__logo-desktop,
+.footer__logo:focus .footer__logo-mobile,
+.footer__logo:focus .footer__logo-desktop {
   fill: $element-color;
 }
 

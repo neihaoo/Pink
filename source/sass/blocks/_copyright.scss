@@ -21,7 +21,8 @@
 
   fill: $element-color;
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: $main-color;
   }
 

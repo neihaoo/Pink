@@ -184,7 +184,8 @@
   border: 2px solid $disabled-color;
   border-radius: 2px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $main-color;
   }
 

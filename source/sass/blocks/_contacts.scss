@@ -101,9 +101,14 @@
   color: $element-color;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $main-color;
     text-decoration: underline;
+  }
+
+  &:active {
+    color: transparentize($main-color, 0.7);
   }
 }
 
@@ -161,7 +166,7 @@
     z-index: 1;
 
     width: 100%;
-    height: 100%;
+    height: 30%;
 
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;

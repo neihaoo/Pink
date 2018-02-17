@@ -30,7 +30,8 @@
   border-radius: 50px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: transparentize($main-color, 0.4);
   }
 
@@ -42,7 +43,8 @@
     background-color: transparent;
     box-shadow: 0 0 0 3px $main-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
     }
   }
@@ -79,7 +81,8 @@
     border-left: 3px solid transparentize($main-color, 0.7);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &::before {
       border-color: transparentize($main-color, 0.4);
     }

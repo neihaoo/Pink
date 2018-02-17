@@ -24,7 +24,8 @@
   border: 3px solid transparentize($main-color, 0.9);
   border-radius: 50px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $main-color;
   }
 

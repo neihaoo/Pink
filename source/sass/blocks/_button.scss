@@ -14,7 +14,8 @@
   border-radius: 50px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $element-color;
 
     background-color: $bkg-main-color;
@@ -41,7 +42,8 @@
 
     border-color: $element-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $bkg-main-color;
 
       background-color: $element-color;
@@ -59,7 +61,8 @@
 
     border-color: transparentize($main-color, 0.9);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: transparentize($main-color, 0.7);
 
       background-color: transparent;
@@ -70,7 +73,7 @@
       color: transparentize($bkg-main-color, 0.7);
 
       background-color: transparentize($main-color, 0.7);
-      border-color: transparentize($main-color, 0.7);
+      border-color: transparent;
     }
   }
 
@@ -90,7 +93,8 @@
     border-color: $btn-square-color;
     border-radius: 2px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $bkg-main-color;
 
       background-color: $btn-square-color--hover;

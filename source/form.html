@@ -14,6 +14,8 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="header">
+    <!-- .nav--opened раскрывает меню при отключённом JS
+    .nav--closed закрывает меню при отключённом JS -->
     <nav class="nav nav--opened nojs">
       <div class="nav__wrapper-main">
         <div class="nav__wrapper-inner">
@@ -119,11 +121,11 @@
             <div class="form-field__wrapper-contacts">
               <div class="form-field__item text-input text-input--contacts text-input--phone">
                 <label class="text-input__label" for="telephone">Номер телефона</label>
-                <input class="text-input__input" id="telephone" type="tel" name="telephone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" placeholder="Номер, пожалуйста">
+                <input class="text-input__input" id="telephone" type="tel" name="telephone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" title="Пример заполнения поля: 8-812-5556666" placeholder="Номер, пожалуйста">
               </div>
               <div class="form-field__item text-input text-input--contacts text-input--email">
                 <label class="text-input__label" for="email">Адрес почты</label>
-                <input class="text-input__input" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Введите почту *" required>
+                <input class="text-input__input" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Пример заполнения поля: mail@htmlacademy.ru" placeholder="Введите почту *" required>
               </div>
             </div>
           </fieldset>
@@ -214,6 +216,7 @@
       </div>
     </div>
   </footer>
+  <!-- .modal-wrapper--active показывает модальное окно -->
   <div class="modal-wrapper">
     <section class="modal modal--error">
       <div class="modal__info-wrapper">

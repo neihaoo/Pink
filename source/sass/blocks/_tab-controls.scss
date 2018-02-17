@@ -52,7 +52,8 @@
     fill: $element-color;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: transparentize($main-color, 0.5);
   }
 
