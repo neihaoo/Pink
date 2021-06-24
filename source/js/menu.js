@@ -1,5 +1,5 @@
-var navJs = document.querySelector('.nav');
-var navToggle = document.querySelector('.nav__toggle');
+const navJs = document.querySelector('.nav');
+const navToggle = document.querySelector('.nav__toggle');
 
 navJs.classList.remove('nojs');
 navJs.classList.replace('nav--opened', 'nav--closed');
