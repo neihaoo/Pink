@@ -1,6 +1,6 @@
 const Fiber = require('fibers');
 const { src, dest, watch, series, parallel } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -18,8 +18,6 @@ const htmlmin = require('gulp-htmlmin');
 const del = require('del');
 const run = require('run-sequence');
 const server = require('browser-sync').create();
-
-sass.compiler = require('sass');
 
 const prepareStyles = () => src('source/sass/styles.scss')
   .pipe(plumber())
@@ -70,7 +68,8 @@ const convertToWebP = () => src('source/img/**/*.{png,jpg}')
 const createSVGSprite = () => src('source/img/for_sprite/*.svg')
   .pipe(svgmin({
     plugins: [{
-      removeViewBox: false
+      name: 'removeViewBox',
+      active: false,
     }]
   }))
   .pipe(svg({
