@@ -1,4 +1,3 @@
-const Fiber = require('fibers');
 const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber');
@@ -16,84 +15,71 @@ const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
 const htmlmin = require('gulp-htmlmin');
 const del = require('del');
-const run = require('run-sequence');
 const server = require('browser-sync').create();
 
-const prepareStyles = () => src('source/sass/styles.scss')
-  .pipe(plumber())
-  .pipe(sass({
-    fiber: Fiber,
-  }))
-  .pipe(postcss([
-    autoprefixer({
-      Browserslist: [
-        'last 4 version'
-      ]})
-  ]))
-  .pipe(dest('build/css'))
-  .pipe(cssmin())
-  .pipe(rename({suffix: '.min'}))
-  .pipe(dest('build/css'))
-  .pipe(server.stream());
+const prepareStyles = () =>
+  src('source/sass/styles.scss')
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([autoprefixer({ Browserslist: ['last 4 version'] })]))
+    .pipe(dest('build/css'))
+    .pipe(cssmin())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest('build/css'))
+    .pipe(server.stream());
 
-const prepareScripts = () => src(['!source/js/picturefill.min.js', 'source/js/*.js'])
+const prepareScripts = () =>
+  src(['!source/js/picturefill.min.js', 'source/js/*.js'])
     .pipe(concat('scripts.js'))
     .pipe(dest('build/js'))
     .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(dest('build/js'));
 
-const minifyImages = () => src('source/img/**/*.{png,jpg,svg}')
-  .pipe(imagemin([
-    imagemin.optipng({
-      optimizationLevel: 3
-    }),
-    imagemin.mozjpeg({
-      progressive: true
-    }),
-    imagemin.svgo({
-      plugins: [{
-        removeViewBox: false
-      }]
-    })
-  ]))
-  .pipe(dest('build/img'));
+const minifyImages = () =>
+  src('source/img/**/*.{png,jpg,svg}')
+    .pipe(
+      imagemin([
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.mozjpeg({ progressive: true }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: false }],
+        }),
+      ])
+    )
+    .pipe(dest('build/img'));
 
-const convertToWebP = () => src('source/img/**/*.{png,jpg}')
-  .pipe(webp({
-    quality: 90
-  }))
-  .pipe(dest('build/img'));
+const convertToWebP = () =>
+  src('source/img/**/*.{png,jpg}')
+    .pipe(webp({ quality: 90 }))
+    .pipe(dest('build/img'));
 
-const createSVGSprite = () => src('source/img/for_sprite/*.svg')
-  .pipe(svgmin({
-    plugins: [{
-      name: 'removeViewBox',
-      active: false,
-    }]
-  }))
-  .pipe(svg({
-    inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(dest('build/img'));
+const createSVGSprite = () =>
+  src('source/img/for_sprite/*.svg')
+    .pipe(
+      svgmin({
+        plugins: [
+          {
+            name: 'removeViewBox',
+            active: false,
+          },
+        ],
+      })
+    )
+    .pipe(svg({ inlineSvg: true }))
+    .pipe(rename('sprite.svg'))
+    .pipe(dest('build/img'));
 
-const minifyHtml = () => src('source/*.html')
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(htmlmin({
-    collapseWhitespace: true
-  }))
-  .pipe(dest('build'));
+const minifyHtml = () =>
+  src('source/*.html')
+    .pipe(posthtml([include()]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('build'));
 
-const copy = () => src([
-    'source/fonts/**/*.{woff,woff2}',
-    'source/js/*.min.js'
-  ], {
-    base: 'source'
-  })
-  .pipe(dest('build'));
+const copy = () =>
+  src(['source/fonts/**/*.{woff,woff2}', 'source/js/*.min.js'], { base: 'source' }).pipe(
+    dest('build')
+  );
 
 const clean = () => del('build');
 
@@ -103,7 +89,7 @@ const serve = () => {
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false,
   });
 
   watch('source/sass/**/*.{scss,sass}', prepareStyles);
@@ -112,11 +98,8 @@ const serve = () => {
 };
 
 exports.serve = serve;
-exports.build = series(clean,
-                       parallel(copy,
-                                minifyImages,
-                                convertToWebP,
-                                prepareStyles,
-                                prepareScripts,
-                                createSVGSprite),
-                       minifyHtml);
+exports.build = series(
+  clean,
+  parallel(copy, minifyImages, convertToWebP, prepareStyles, prepareScripts, createSVGSprite),
+  minifyHtml
+);
